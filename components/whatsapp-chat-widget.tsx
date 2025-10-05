@@ -1,0 +1,143 @@
+"use client"
+
+import { useState } from "react"
+import { MessageCircle, X, Send } from "lucide-react"
+import Image from "next/image"
+
+export function WhatsAppChatWidget() {
+  const [isOpen, setIsOpen] = useState(false)
+  const [message, setMessage] = useState("")
+  const phoneNumber = "573147030835"
+
+  const predefinedMessages = [
+    "Hola, necesito información sobre avalúos",
+    "Quiero solicitar un dictamen técnico",
+    "Necesito información sobre topografía",
+    "Solicitar cotización",
+  ]
+
+  const handleSendMessage = (customMessage?: string) => {
+    const textToSend = customMessage || message
+    if (textToSend.trim()) {
+      const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(textToSend)}`
+      window.open(url, "_blank")
+      setMessage("")
+      setIsOpen(false)
+    }
+  }
+
+  const handleKeyPress = (e: React.KeyboardEvent) => {
+    if (e.key === "Enter" && !e.shiftKey) {
+      e.preventDefault()
+      handleSendMessage()
+    }
+  }
+
+  return (
+    <>
+      {/* Chat Widget */}
+      {isOpen && (
+        <div className="fixed bottom-24 right-6 w-96 max-w-[calc(100vw-3rem)] bg-white rounded-2xl shadow-2xl z-50 overflow-hidden animate-in slide-in-from-bottom-5 duration-300">
+          {/* Header */}
+          <div className="bg-gradient-to-r from-green-600 to-green-500 p-4 flex items-center justify-between">
+            <div className="flex items-center space-x-3">
+              <div className="w-12 h-12 bg-white rounded-full flex items-center justify-center">
+                <MessageCircle className="h-6 w-6 text-green-600" />
+              </div>
+              <div className="text-white">
+                <h3 className="font-semibold text-lg">Dictaminemos</h3>
+                <p className="text-sm text-green-100">En línea</p>
+              </div>
+            </div>
+            <button
+              onClick={() => setIsOpen(false)}
+              className="text-white hover:bg-white/20 p-2 rounded-full transition-colors"
+              aria-label="Cerrar chat"
+            >
+              <X className="h-5 w-5" />
+            </button>
+          </div>
+
+          {/* Chat Body */}
+          <div className="bg-gray-50 p-4 h-96 overflow-y-auto">
+            {/* Welcome Message */}
+            <div className="mb-4">
+              <div className="bg-white p-4 rounded-lg shadow-sm max-w-[85%]">
+                <p className="text-sm text-gray-800 mb-2">
+                  ¡Hola! 👋 Bienvenido a <strong>Dictaminemos</strong>
+                </p>
+                <p className="text-sm text-gray-600">
+                  ¿En qué podemos ayudarte hoy? Somos especialistas en avalúos, dictámenes técnicos y topografía.
+                </p>
+              </div>
+              <span className="text-xs text-gray-400 ml-2 mt-1 block">Ahora</span>
+            </div>
+
+            {/* Quick Options */}
+            <div className="space-y-2 mb-4">
+              <p className="text-xs text-gray-500 mb-2">Mensajes rápidos:</p>
+              {predefinedMessages.map((msg, index) => (
+                <button
+                  key={index}
+                  onClick={() => handleSendMessage(msg)}
+                  className="w-full bg-white hover:bg-gray-100 text-left p-3 rounded-lg shadow-sm text-sm text-gray-700 transition-colors border border-gray-200"
+                >
+                  {msg}
+                </button>
+              ))}
+            </div>
+          </div>
+
+          {/* Input Area */}
+          <div className="bg-white p-4 border-t border-gray-200">
+            <div className="flex items-center space-x-2">
+              <input
+                type="text"
+                value={message}
+                onChange={(e) => setMessage(e.target.value)}
+                onKeyPress={handleKeyPress}
+                placeholder="Escribe tu mensaje..."
+                className="flex-1 px-4 py-3 border border-gray-300 rounded-full focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent text-sm"
+              />
+              <button
+                onClick={() => handleSendMessage()}
+                className="bg-green-600 hover:bg-green-700 text-white p-3 rounded-full transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+                disabled={!message.trim()}
+                aria-label="Enviar mensaje"
+              >
+                <Send className="h-5 w-5" />
+              </button>
+            </div>
+            <p className="text-xs text-gray-400 mt-2 text-center">
+              Al enviar, serás redirigido a WhatsApp
+            </p>
+          </div>
+        </div>
+      )}
+
+      {/* Floating Button */}
+      <button
+        onClick={() => setIsOpen(!isOpen)}
+        className="fixed bottom-6 right-6 bg-green-600 hover:bg-green-700 hover:scale-110 active:scale-95 text-white p-4 rounded-full shadow-lg z-50 transition-all duration-200 group"
+        aria-label="Abrir chat de WhatsApp"
+      >
+        {isOpen ? (
+          <X className="h-7 w-7" />
+        ) : (
+          <>
+            <MessageCircle className="h-7 w-7" />
+            <span className="absolute -top-1 -right-1 w-3 h-3 bg-red-500 rounded-full animate-pulse" />
+          </>
+        )}
+      </button>
+
+      {/* Tooltip */}
+      {!isOpen && (
+        <div className="fixed bottom-6 right-24 bg-gray-900 text-white px-4 py-2 rounded-lg shadow-lg z-40 opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none">
+          <span className="text-sm whitespace-nowrap">¿Necesitas ayuda? Chatea con nosotros</span>
+          <div className="absolute right-0 top-1/2 transform translate-x-2 -translate-y-1/2 w-0 h-0 border-t-4 border-t-transparent border-b-4 border-b-transparent border-l-4 border-l-gray-900" />
+        </div>
+      )}
+    </>
+  )
+}
