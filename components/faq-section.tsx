@@ -184,36 +184,34 @@ export function FAQSection() {
                 <div className="space-y-4">
                   {category.faqs.map((faq, index) => {
                     const key = `${category.key}-${index}`
+                    const isOpen = openIndex === key
                     return (
-                      <motion.div
-                        key={key}
-                        initial={{ opacity: 0, y: 20 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.3, delay: index * 0.05 }}
-                      >
+                      <div key={key} className="bg-white rounded-lg shadow-md overflow-hidden">
                         <button
-                          onClick={() => setOpenIndex(openIndex === key ? null : key)}
-                          className="w-full bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow text-left flex justify-between items-center"
+                          onClick={() => setOpenIndex(isOpen ? null : key)}
+                          className="w-full p-6 hover:bg-gray-50 transition-colors text-left flex justify-between items-center"
                         >
                           <h3 className="text-lg font-semibold text-gray-900 pr-4">{faq.question}</h3>
                           <ChevronDown
-                            className={`h-5 w-5 text-gray-500 flex-shrink-0 transition-transform ${openIndex === key ? "rotate-180" : ""}`}
+                            className={`h-5 w-5 text-gray-500 flex-shrink-0 transition-transform duration-200 ${isOpen ? "rotate-180" : ""}`}
                           />
                         </button>
-                        <AnimatePresence>
-                          {openIndex === key && (
+                        <AnimatePresence initial={false}>
+                          {isOpen && (
                             <motion.div
-                              initial={{ opacity: 0, height: 0 }}
-                              animate={{ opacity: 1, height: "auto" }}
-                              exit={{ opacity: 0, height: 0 }}
-                              transition={{ duration: 0.3 }}
-                              className="bg-white mx-4 px-6 pb-6 rounded-b-lg"
+                              initial={{ height: 0 }}
+                              animate={{ height: "auto" }}
+                              exit={{ height: 0 }}
+                              transition={{ duration: 0.2, ease: "easeInOut" }}
+                              className="overflow-hidden"
                             >
-                              <p className="text-gray-600 leading-relaxed">{faq.answer}</p>
+                              <div className="px-6 pb-6 pt-2">
+                                <p className="text-gray-600 leading-relaxed">{faq.answer}</p>
+                              </div>
                             </motion.div>
                           )}
                         </AnimatePresence>
-                      </motion.div>
+                      </div>
                     )
                   })}
                 </div>

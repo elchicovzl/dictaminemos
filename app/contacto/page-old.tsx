@@ -1,111 +1,12 @@
 "use client"
 
-import { useState, useEffect } from "react"
 import { motion } from "framer-motion"
-import { Clock, Mail, MapPin, Phone, Loader2 } from "lucide-react"
-import { useForm } from "react-hook-form"
-import { zodResolver } from "@hookform/resolvers/zod"
-import { toast } from "sonner"
+import { Clock, Mail, MapPin, Phone } from "lucide-react"
 
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
-import { contactFormSchema, type ContactFormData } from "@/lib/validations/contact"
 
 export default function ContactoPage() {
-  const [isSubmitting, setIsSubmitting] = useState(false)
-  const [formStartTime, setFormStartTime] = useState<number>(0)
-
-  const {
-    register,
-    handleSubmit,
-    formState: { errors },
-    reset,
-  } = useForm<ContactFormData>({
-    resolver: zodResolver(contactFormSchema),
-    defaultValues: {
-      timestamp: Date.now(),
-    },
-  })
-
-  // Registrar cuando el usuario empieza a interactuar con el formulario
-  useEffect(() => {
-    setFormStartTime(Date.now())
-  }, [])
-
-  // Rate limiting del lado del cliente
-  const checkRateLimit = (): boolean => {
-    const lastSubmit = localStorage.getItem("lastContactSubmit")
-    if (lastSubmit) {
-      const timeSince = Date.now() - parseInt(lastSubmit)
-      if (timeSince < 60000) {
-        // 60 segundos
-        const secondsLeft = Math.ceil((60000 - timeSince) / 1000)
-        toast.error(`Por favor espera ${secondsLeft} segundos antes de enviar otro mensaje`)
-        return false
-      }
-    }
-    return true
-  }
-
-  const onSubmit = async (data: ContactFormData) => {
-    // Verificar rate limiting
-    if (!checkRateLimit()) {
-      return
-    }
-
-    // Validar honeypot
-    if (data.website && data.website.length > 0) {
-      console.warn("Bot detected - honeypot filled")
-      toast.error("Error al enviar el formulario")
-      return
-    }
-
-    // Validar tiempo mínimo
-    const timeElapsed = Date.now() - formStartTime
-    if (timeElapsed < 3000) {
-      toast.error("Por favor tómate un momento para completar el formulario")
-      return
-    }
-
-    setIsSubmitting(true)
-
-    try {
-      const response = await fetch("/api/contact", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          ...data,
-          timestamp: formStartTime,
-        }),
-      })
-
-      const result = await response.json()
-
-      if (!response.ok) {
-        throw new Error(result.error || "Error al enviar el mensaje")
-      }
-
-      // Éxito
-      toast.success("¡Mensaje enviado exitosamente! Nos pondremos en contacto pronto.")
-
-      // Guardar timestamp del último envío
-      localStorage.setItem("lastContactSubmit", Date.now().toString())
-
-      // Limpiar formulario
-      reset()
-      setFormStartTime(Date.now())
-    } catch (error) {
-      console.error("Error sending form:", error)
-      toast.error(
-        error instanceof Error ? error.message : "Error al enviar el mensaje. Por favor intenta nuevamente."
-      )
-    } finally {
-      setIsSubmitting(false)
-    }
-  }
-
   return (
     <div className="min-h-screen bg-white dark:bg-gray-900">
       {/* Hero Section */}
@@ -118,8 +19,8 @@ export default function ContactoPage() {
               rotate: [0, 180, 360],
             }}
             transition={{
-              scale: { duration: 6, repeat: Infinity, ease: "easeInOut" },
-              rotate: { duration: 20, repeat: Infinity, ease: "linear" },
+              scale: { duration: 6, repeat: Number.POSITIVE_INFINITY, ease: "easeInOut" },
+              rotate: { duration: 20, repeat: Number.POSITIVE_INFINITY, ease: "linear" },
             }}
             className="absolute top-16 right-20 w-32 h-32 border-2 border-teal-400/30 rounded-full"
           />
@@ -130,8 +31,8 @@ export default function ContactoPage() {
               x: [0, 20, -20, 0],
             }}
             transition={{
-              y: { duration: 4, repeat: Infinity, ease: "easeInOut" },
-              x: { duration: 8, repeat: Infinity, ease: "easeInOut" },
+              y: { duration: 4, repeat: Number.POSITIVE_INFINITY, ease: "easeInOut" },
+              x: { duration: 8, repeat: Number.POSITIVE_INFINITY, ease: "easeInOut" },
             }}
             className="absolute bottom-20 left-16 w-24 h-24 bg-gradient-to-r from-cyan-500/20 to-teal-500/20 rounded-lg rotate-12"
           />
@@ -143,7 +44,7 @@ export default function ContactoPage() {
             y: [0, -15, 0],
             rotate: [0, 10, -10, 0],
           }}
-          transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
+          transition={{ duration: 4, repeat: Number.POSITIVE_INFINITY, ease: "easeInOut" }}
           className="absolute top-1/4 left-16 text-teal-300/40"
         >
           <Phone size={50} />
@@ -154,7 +55,7 @@ export default function ContactoPage() {
             scale: [1, 1.3, 1],
             rotate: [0, -15, 15, 0],
           }}
-          transition={{ duration: 5, repeat: Infinity, ease: "easeInOut", delay: 1 }}
+          transition={{ duration: 5, repeat: Number.POSITIVE_INFINITY, ease: "easeInOut", delay: 1 }}
           className="absolute top-1/3 right-20 text-cyan-300/40"
         >
           <Mail size={45} />
@@ -165,7 +66,7 @@ export default function ContactoPage() {
             x: [0, 25, -25, 0],
             y: [0, -10, 0],
           }}
-          transition={{ duration: 6, repeat: Infinity, ease: "easeInOut", delay: 2 }}
+          transition={{ duration: 6, repeat: Number.POSITIVE_INFINITY, ease: "easeInOut", delay: 2 }}
           className="absolute bottom-1/3 left-1/4 text-teal-300/40"
         >
           <MapPin size={40} />
@@ -183,7 +84,7 @@ export default function ContactoPage() {
               }}
               transition={{
                 duration: 3 + Math.random() * 2,
-                repeat: Infinity,
+                repeat: Number.POSITIVE_INFINITY,
                 delay: Math.random() * 3,
                 ease: "easeInOut",
               }}
@@ -282,9 +183,7 @@ export default function ContactoPage() {
                     <h3 className="font-semibold text-gray-900 dark:text-white mb-1">Dirección</h3>
                     <p className="text-gray-600 dark:text-gray-400">Calle 51 Nro. 49-11, Oficina 605</p>
                     <p className="text-gray-600 dark:text-gray-400">Edificio Fabricato, Medellín</p>
-                    <p className="text-sm text-gray-500 dark:text-gray-500 mt-1">
-                      Cerca a la estación del metro Parque Berrío
-                    </p>
+                    <p className="text-sm text-gray-500 dark:text-gray-500 mt-1">Cerca a la estación del metro Parque Berrío</p>
                   </div>
                 </div>
 
@@ -304,28 +203,18 @@ export default function ContactoPage() {
               {/* Social Media */}
               <div className="mt-8">
                 <h3 className="font-semibold text-gray-900 dark:text-white mb-4">Síguenos en Redes Sociales</h3>
-                <div className="flex gap-4">
-                  <a
-                    href="https://www.facebook.com/share/1CspHkjwKF/?mibextid=wwXIfr"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex items-center justify-center w-12 h-12 bg-blue-600 hover:bg-blue-700 rounded-full transition-colors"
-                    aria-label="Facebook"
-                  >
-                    <svg className="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
-                      <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
-                    </svg>
+                <div className="flex space-x-4">
+                  <a href="#" className="text-blue-600 hover:text-blue-800 transition-colors">
+                    Facebook
                   </a>
-                  <a
-                    href="https://www.instagram.com/dictaminemos_1?igsh=MWJmN3ZhaW81aDVhMQ=="
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex items-center justify-center w-12 h-12 bg-gradient-to-br from-purple-600 via-pink-600 to-orange-500 hover:opacity-90 rounded-full transition-opacity"
-                    aria-label="Instagram"
-                  >
-                    <svg className="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
-                      <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
-                    </svg>
+                  <a href="#" className="text-blue-600 hover:text-blue-800 transition-colors">
+                    LinkedIn
+                  </a>
+                  <a href="#" className="text-blue-600 hover:text-blue-800 transition-colors">
+                    Instagram
+                  </a>
+                  <a href="#" className="text-blue-600 hover:text-blue-800 transition-colors">
+                    Twitter
                   </a>
                 </div>
               </div>
@@ -340,7 +229,7 @@ export default function ContactoPage() {
               <Card className="bg-white dark:bg-gray-800 border-gray-200 dark:border-gray-700">
                 <CardContent className="p-8">
                   <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-6">Cotiza con nosotros</h2>
-                  <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
+                  <form className="space-y-6">
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                       <div>
                         <label
@@ -352,14 +241,11 @@ export default function ContactoPage() {
                         <input
                           type="text"
                           id="firstName"
-                          {...register("firstName")}
-                          disabled={isSubmitting}
-                          className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-white dark:bg-gray-700 text-gray-900 dark:text-white disabled:opacity-50 disabled:cursor-not-allowed"
+                          name="firstName"
+                          required
+                          className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-white dark:bg-gray-700 text-gray-900 dark:text-white"
                           placeholder="Tu nombre"
                         />
-                        {errors.firstName && (
-                          <p className="mt-1 text-sm text-red-600">{errors.firstName.message}</p>
-                        )}
                       </div>
                       <div>
                         <label
@@ -371,54 +257,58 @@ export default function ContactoPage() {
                         <input
                           type="text"
                           id="lastName"
-                          {...register("lastName")}
-                          disabled={isSubmitting}
-                          className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-white dark:bg-gray-700 text-gray-900 dark:text-white disabled:opacity-50 disabled:cursor-not-allowed"
+                          name="lastName"
+                          required
+                          className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-white dark:bg-gray-700 text-gray-900 dark:text-white"
                           placeholder="Tu apellido"
                         />
-                        {errors.lastName && <p className="mt-1 text-sm text-red-600">{errors.lastName.message}</p>}
                       </div>
                     </div>
 
                     <div>
-                      <label htmlFor="email" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+                      <label
+                        htmlFor="email"
+                        className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2"
+                      >
                         Correo Electrónico *
                       </label>
                       <input
                         type="email"
                         id="email"
-                        {...register("email")}
-                        disabled={isSubmitting}
-                        className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-white dark:bg-gray-700 text-gray-900 dark:text-white disabled:opacity-50 disabled:cursor-not-allowed"
+                        name="email"
+                        required
+                        className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-white dark:bg-gray-700 text-gray-900 dark:text-white"
                         placeholder="tu@email.com"
                       />
-                      {errors.email && <p className="mt-1 text-sm text-red-600">{errors.email.message}</p>}
                     </div>
 
                     <div>
-                      <label htmlFor="phone" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+                      <label
+                        htmlFor="phone"
+                        className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2"
+                      >
                         Teléfono
                       </label>
                       <input
                         type="tel"
                         id="phone"
-                        {...register("phone")}
-                        disabled={isSubmitting}
-                        className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-white dark:bg-gray-700 text-gray-900 dark:text-white disabled:opacity-50 disabled:cursor-not-allowed"
-                        placeholder="300 123 4567"
+                        name="phone"
+                        className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-white dark:bg-gray-700 text-gray-900 dark:text-white"
+                        placeholder="+57 300 123 4567"
                       />
-                      {errors.phone && <p className="mt-1 text-sm text-red-600">{errors.phone.message}</p>}
                     </div>
 
                     <div>
-                      <label htmlFor="service" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+                      <label
+                        htmlFor="service"
+                        className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2"
+                      >
                         Servicio de Interés
                       </label>
                       <select
                         id="service"
-                        {...register("service")}
-                        disabled={isSubmitting}
-                        className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-white dark:bg-gray-700 text-gray-900 dark:text-white disabled:opacity-50 disabled:cursor-not-allowed"
+                        name="service"
+                        className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-white dark:bg-gray-700 text-gray-900 dark:text-white"
                       >
                         <option value="">Selecciona un servicio</option>
                         <option value="avaluo-comercial">Avalúo Comercial</option>
@@ -433,59 +323,31 @@ export default function ContactoPage() {
                     </div>
 
                     <div>
-                      <label htmlFor="message" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+                      <label
+                        htmlFor="message"
+                        className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2"
+                      >
                         Mensaje *
                       </label>
                       <textarea
                         id="message"
-                        {...register("message")}
-                        disabled={isSubmitting}
+                        name="message"
                         rows={5}
-                        className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-white dark:bg-gray-700 text-gray-900 dark:text-white disabled:opacity-50 disabled:cursor-not-allowed"
+                        required
+                        className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-white dark:bg-gray-700 text-gray-900 dark:text-white"
                         placeholder="Describe tu proyecto o consulta..."
-                      />
-                      {errors.message && <p className="mt-1 text-sm text-red-600">{errors.message.message}</p>}
-                    </div>
-
-                    {/* Honeypot field - hidden from users, visible to bots */}
-                    <div className="hidden" aria-hidden="true">
-                      <label htmlFor="website">Website (leave blank)</label>
-                      <input
-                        type="text"
-                        id="website"
-                        {...register("website")}
-                        tabIndex={-1}
-                        autoComplete="off"
                       />
                     </div>
 
                     <div className="flex items-start space-x-2">
-                      <input
-                        type="checkbox"
-                        id="privacy"
-                        {...register("privacy")}
-                        disabled={isSubmitting}
-                        className="mt-1"
-                      />
+                      <input type="checkbox" id="privacy" name="privacy" required className="mt-1" />
                       <label htmlFor="privacy" className="text-sm text-gray-600 dark:text-gray-400">
                         Acepto el tratamiento de mis datos personales de acuerdo con la política de privacidad *
                       </label>
                     </div>
-                    {errors.privacy && <p className="mt-1 text-sm text-red-600">{errors.privacy.message}</p>}
 
-                    <Button
-                      type="submit"
-                      disabled={isSubmitting}
-                      className="w-full bg-blue-600 hover:bg-blue-700 py-3 text-lg disabled:opacity-50 disabled:cursor-not-allowed"
-                    >
-                      {isSubmitting ? (
-                        <>
-                          <Loader2 className="mr-2 h-5 w-5 animate-spin" />
-                          Enviando...
-                        </>
-                      ) : (
-                        "Enviar Mensaje"
-                      )}
+                    <Button type="submit" className="w-full bg-blue-600 hover:bg-blue-700 py-3 text-lg">
+                      Enviar Mensaje
                     </Button>
                   </form>
                 </CardContent>
@@ -538,26 +400,43 @@ export default function ContactoPage() {
             </p>
           </motion.div>
 
-          <div className="flex justify-center">
-            <motion.div
-              initial={{ opacity: 0, y: 50 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              className="w-full max-w-md"
-            >
-              <Card className="bg-white dark:bg-gray-700 border-gray-200 dark:border-gray-600">
-                <CardContent className="p-8 text-center">
-                  <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-6">Región Andina</h3>
-                  <ul className="space-y-3 text-lg text-gray-600 dark:text-gray-400">
-                    <li>Bogotá</li>
-                    <li>Medellín</li>
-                    <li>Cali</li>
-                    <li>Bucaramanga</li>
-                    <li>Manizales</li>
-                  </ul>
-                </CardContent>
-              </Card>
-            </motion.div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {[
+              {
+                region: "Región Andina",
+                cities: ["Bogotá", "Medellín", "Cali", "Bucaramanga", "Manizales"],
+              },
+              {
+                region: "Región Caribe",
+                cities: ["Barranquilla", "Cartagena", "Santa Marta", "Montería", "Valledupar"],
+              },
+              {
+                region: "Región Pacífica",
+                cities: ["Cali", "Buenaventura", "Tumaco", "Quibdó", "Popayán"],
+              },
+              {
+                region: "Región Orinoquía",
+                cities: ["Villavicencio", "Yopal", "Arauca", "Puerto Carreño", "Inírida"],
+              },
+            ].map((region, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 50 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: index * 0.1 }}
+              >
+                <Card className="h-full bg-white dark:bg-gray-700 border-gray-200 dark:border-gray-600">
+                  <CardContent className="p-6 text-center">
+                    <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-4">{region.region}</h3>
+                    <ul className="space-y-2 text-gray-600 dark:text-gray-400">
+                      {region.cities.map((city, cityIndex) => (
+                        <li key={cityIndex}>{city}</li>
+                      ))}
+                    </ul>
+                  </CardContent>
+                </Card>
+              </motion.div>
+            ))}
           </div>
         </div>
       </section>

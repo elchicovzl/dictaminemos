@@ -288,31 +288,25 @@ export default function QuienesSomosPage() {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-4xl mx-auto">
             {[
-              {
-                icon: Users,
-                title: "Arquitectos",
-                description: "Especialistas en evaluación estructural y análisis de construcciones",
-                count: "8+",
-              },
-              {
-                icon: Zap,
-                title: "Ingenieros",
-                description: "Expertos en topografía, catastro y tecnología de medición",
-                count: "6+",
-              },
               {
                 icon: Award,
                 title: "Abogados",
                 description: "Especialistas en derecho inmobiliario y procesos judiciales",
-                count: "4+",
+                count: "3",
+              },
+              {
+                icon: Users,
+                title: "Secretaria",
+                description: "Soporte administrativo y atención al cliente",
+                count: "1",
               },
               {
                 icon: CheckCircle,
-                title: "Avaluadores",
-                description: "Certificados bajo normas internacionales ISO/IEC 17024",
-                count: "12+",
+                title: "Contador",
+                description: "Gestión contable y financiera",
+                count: "1",
               },
             ].map((member, index) => (
               <motion.div
@@ -354,26 +348,23 @@ export default function QuienesSomosPage() {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {[
-              "Certificación ISO/IEC 17024 - ICONTEC",
-              "Registro ante Superintendencia de Notariado y Registro",
-              "Certificación en Avalúos Comerciales",
-              "Especialización en Dictámenes Técnicos",
-              "Certificación en Topografía Digital",
-              "Registro Profesional COPNIA",
-            ].map((cert, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, scale: 0.8 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="bg-white dark:bg-gray-700 p-6 rounded-lg shadow-md hover:shadow-lg dark:hover:shadow-2xl transition-shadow text-center border border-gray-200 dark:border-gray-600"
-              >
-                <Award className="h-12 w-12 text-blue-600 mx-auto mb-4" />
-                <p className="font-semibold text-gray-900 dark:text-gray-300">{cert}</p>
-              </motion.div>
-            ))}
+          <div className="flex justify-center">
+            <motion.div
+              initial={{ opacity: 0, scale: 0.8 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.5 }}
+              className="bg-white dark:bg-gray-700 p-8 rounded-lg shadow-md hover:shadow-xl dark:hover:shadow-2xl transition-shadow text-center border-2 border-blue-200 dark:border-blue-600 max-w-md"
+            >
+              <Award className="h-16 w-16 text-blue-600 mx-auto mb-6" />
+              <h3 className="font-bold text-2xl text-gray-900 dark:text-white mb-4">
+                Registro Abierto de Avaluadores (RAA)
+              </h3>
+              <p className="text-gray-600 dark:text-gray-400 leading-relaxed">
+                Registro oficial que certifica nuestra habilitación como avaluadores profesionales según la Ley 1673 de 2013.
+                Todos nuestros avaluadores están debidamente inscritos y certificados ante el RAA, garantizando la validez
+                legal de nuestros avalúos y dictámenes técnicos.
+              </p>
+            </motion.div>
           </div>
         </div>
       </section>

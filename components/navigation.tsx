@@ -25,8 +25,8 @@ export function Navigation() {
         <div className="flex items-center justify-between">
           <Link href="/" className="flex items-center space-x-2">
             <Image
-              src="/images/logo.jpg"
-              alt="Dictaminemos Logo"
+              src="/images/logo.svg"
+              alt="Dictaminemos - Avalúos, Dictámenes y Topografía en Medellín"
               width={200}
               height={60}
               className="h-12 w-auto"

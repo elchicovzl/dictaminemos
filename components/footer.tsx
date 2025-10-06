@@ -1,6 +1,6 @@
 import Image from "next/image"
 import Link from "next/link"
-import { Facebook, Instagram, Linkedin, Mail, MapPin, Phone } from "lucide-react"
+import { Facebook, Instagram, Mail, MapPin, Phone } from "lucide-react"
 
 export function Footer() {
   return (
@@ -9,8 +9,8 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div>
             <Image
-              src="/images/logo.jpg"
-              alt="Dictaminemos Logo"
+              src="/images/logo.svg"
+              alt="Dictaminemos - Avalúos, Dictámenes y Topografía"
               width={200}
               height={60}
               className="h-12 w-auto mb-4 brightness-0 invert"
@@ -19,13 +19,22 @@ export function Footer() {
               Especialistas en avalúos, dictámenes y topografía con más de 15 años de experiencia en el sector.
             </p>
             <div className="flex space-x-4">
-              <a href="#" className="text-gray-400 hover:text-white transition-colors">
+              <a
+                href="https://www.facebook.com/share/1CspHkjwKF/?mibextid=wwXIfr"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-gray-400 hover:text-white transition-colors"
+                aria-label="Facebook"
+              >
                 <Facebook className="h-5 w-5" />
               </a>
-              <a href="#" className="text-gray-400 hover:text-white transition-colors">
-                <Linkedin className="h-5 w-5" />
-              </a>
-              <a href="#" className="text-gray-400 hover:text-white transition-colors">
+              <a
+                href="https://www.instagram.com/dictaminemos_1?igsh=MWJmN3ZhaW81aDVhMQ=="
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-gray-400 hover:text-white transition-colors"
+                aria-label="Instagram"
+              >
                 <Instagram className="h-5 w-5" />
               </a>
             </div>
@@ -119,7 +128,7 @@ export function Footer() {
         </div>
 
         <div className="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
-          <p>&copy; 2024 Dictaminemos. Todos los derechos reservados.</p>
+          <p>&copy; 2025 Dictaminemos. Todos los derechos reservados.</p>
         </div>
       </div>
     </footer>

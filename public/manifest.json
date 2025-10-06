@@ -1,0 +1,28 @@
+{
+  "name": "Dictaminemos - Avalúos, Dictámenes y Topografía",
+  "short_name": "Dictaminemos",
+  "description": "Avalúos comerciales, dictámenes periciales y topografía con drones en Medellín. +15 años de experiencia.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#1e40af",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/images/logo.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/images/favicon.ico",
+      "sizes": "48x48",
+      "type": "image/x-icon"
+    }
+  ],
+  "categories": ["business", "finance", "productivity"],
+  "lang": "es-CO",
+  "dir": "ltr",
+  "scope": "/",
+  "screenshots": []
+}

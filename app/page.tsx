@@ -31,12 +31,6 @@ const TechnologySlider = dynamic(
     loading: () => <div className="py-20" />,
   },
 )
-const ProjectsCarousel = dynamic(
-  () => import("@/components/projects-carousel").then((mod) => ({ default: mod.ProjectsCarousel })),
-  {
-    loading: () => <div className="py-20 bg-gray-50" />,
-  },
-)
 
 export default function HomePage() {
   const { scrollYProgress } = useScroll()
@@ -260,30 +254,30 @@ export default function HomePage() {
               </motion.div>
             </motion.div>
           </motion.div>
-
-          {/* Scroll Indicator */}
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 3, duration: 1 }}
-            className="absolute bottom-8 left-1/2 transform -translate-x-1/2"
-          >
-            <motion.div
-              animate={{ y: [0, 10, 0] }}
-              transition={{ duration: 2, repeat: Number.POSITIVE_INFINITY }}
-              className="flex flex-col items-center text-blue-200"
-            >
-              <span className="text-sm mb-2">Scroll</span>
-              <div className="w-6 h-10 border-2 border-blue-200 rounded-full flex justify-center">
-                <motion.div
-                  animate={{ y: [0, 12, 0] }}
-                  transition={{ duration: 2, repeat: Number.POSITIVE_INFINITY }}
-                  className="w-1 h-3 bg-blue-200 rounded-full mt-2"
-                />
-              </div>
-            </motion.div>
-          </motion.div>
         </div>
+
+        {/* Scroll Indicator - Outside main content container */}
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 3, duration: 1 }}
+          className="absolute bottom-32 md:bottom-40 left-1/2 transform -translate-x-1/2 z-20"
+        >
+          <motion.div
+            animate={{ y: [0, 10, 0] }}
+            transition={{ duration: 2, repeat: Number.POSITIVE_INFINITY }}
+            className="flex flex-col items-center text-blue-200"
+          >
+            <span className="text-sm mb-2">Scroll</span>
+            <div className="w-6 h-10 border-2 border-blue-200 rounded-full flex justify-center">
+              <motion.div
+                animate={{ y: [0, 12, 0] }}
+                transition={{ duration: 2, repeat: Number.POSITIVE_INFINITY }}
+                className="w-1 h-3 bg-blue-200 rounded-full mt-2"
+              />
+            </div>
+          </motion.div>
+        </motion.div>
       </section>
 
       {/* Stats Section */}
@@ -382,9 +376,6 @@ export default function HomePage() {
 
       {/* Services Slider */}
       <ServicesSlider />
-
-      {/* Projects Carousel */}
-      <ProjectsCarousel />
 
       {/* Technology Slider */}
       <TechnologySlider />

@@ -484,7 +484,7 @@ export default function ServiciosPage() {
               <Button
                 size="lg"
                 variant="outline"
-                className="border-white text-white hover:bg-white hover:text-blue-900 px-8 py-3 text-lg"
+                className="border-2 border-white text-white hover:bg-white hover:text-blue-900 px-8 py-3 text-lg bg-transparent backdrop-blur-sm"
                 asChild
               >
                 <Link href="/blog">Conoce Más en Nuestro Blog</Link>
