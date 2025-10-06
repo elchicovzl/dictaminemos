@@ -76,7 +76,7 @@ export default function QuienesSomosPage() {
             </motion.div>
 
             <motion.h1
-              className="text-5xl md:text-6xl font-bold mb-6"
+              className="text-4xl sm:text-5xl md:text-6xl font-bold mb-6 px-4"
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.5 }}
@@ -86,13 +86,13 @@ export default function QuienesSomosPage() {
 
             <motion.div
               initial={{ width: 0 }}
-              animate={{ width: "200px" }}
+              animate={{ width: "150px" }}
               transition={{ duration: 1, delay: 1 }}
-              className="h-1 bg-gradient-to-r from-blue-400 to-purple-400 mx-auto mb-6"
+              className="h-1 bg-gradient-to-r from-blue-400 to-purple-400 mx-auto mb-6 sm:w-[200px]"
             />
 
             <motion.p
-              className="text-xl md:text-2xl max-w-3xl mx-auto text-blue-100"
+              className="text-lg sm:text-xl md:text-2xl max-w-3xl mx-auto text-blue-100 px-4"
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 1.2 }}
@@ -109,38 +109,38 @@ export default function QuienesSomosPage() {
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <motion.div
-              initial={{ opacity: 0, x: -50 }}
-              whileInView={{ opacity: 1, x: 0 }}
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
             >
-              <h2 className="text-4xl font-bold text-gray-900 dark:text-white mb-6">Nuestra Historia: Pasión, Experiencia y Profesionalismo</h2>
+              <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 dark:text-white mb-6">Nuestra Historia: Pasión, Experiencia y Profesionalismo</h2>
 
-              <h3 className="text-xl font-bold text-blue-600 mb-3">Los Inicios de la Experiencia (Año 2000)</h3>
-              <p className="text-gray-600 dark:text-gray-400 mb-6 text-lg leading-relaxed">
+              <h3 className="text-lg sm:text-xl font-bold text-blue-600 mb-3">Los Inicios de la Experiencia (Año 2000)</h3>
+              <p className="text-gray-600 dark:text-gray-400 mb-6 text-base sm:text-lg leading-relaxed">
                 En el año 2000, nuestro socio fundador, el Dr. Abel Adrián Escobar Escudero, egresado de Derecho,
                 inició su carrera como auxiliar de justicia. Durante 5 años, se desempeñó como avaluador certificado
                 por el Registro Nacional de Avaluadores (RNA), forjando desde entonces una trayectoria especializada
                 y reconocida en el campo de los avalúos.
               </p>
 
-              <h3 className="text-xl font-bold text-blue-600 mb-3">La Unión de Visiones (2016 - 2021)</h3>
-              <p className="text-gray-600 dark:text-gray-400 mb-6 text-lg leading-relaxed">
+              <h3 className="text-lg sm:text-xl font-bold text-blue-600 mb-3">La Unión de Visiones (2016 - 2021)</h3>
+              <p className="text-gray-600 dark:text-gray-400 mb-6 text-base sm:text-lg leading-relaxed">
                 En 2016, el Dr. Escobar une su camino profesional con el Dr. Andrés Camilo García Hernández,
                 abogado egresado en 2018. Esta asociación, que se consolidó formalmente como sociedad en 2021,
                 combinó años de experiencia práctica con una perspectiva legal renovada, sentando las bases para
                 un proyecto más ambicioso.
               </p>
 
-              <h3 className="text-xl font-bold text-blue-600 mb-3">El Nacimiento de Dictaminemos (2023)</h3>
-              <p className="text-gray-600 dark:text-gray-400 mb-6 text-lg leading-relaxed">
+              <h3 className="text-lg sm:text-xl font-bold text-blue-600 mb-3">El Nacimiento de Dictaminemos (2023)</h3>
+              <p className="text-gray-600 dark:text-gray-400 mb-6 text-base sm:text-lg leading-relaxed">
                 Con la formalización del sector a través de la Ley del Avaluador (Ley 1673), los socios vieron la
                 clara necesidad de crear una firma que no solo cumpliera con la nueva normativa, sino que elevara
                 el estándar de calidad y confianza en el mercado. Así, en 2023, nace Dictaminemos, una empresa
                 creada para responder con rigor técnico y ético a las exigencias del sector inmobiliario y patrimonial.
               </p>
 
-              <h3 className="text-xl font-bold text-blue-600 mb-3">Nuestro Presente (2025)</h3>
-              <p className="text-gray-600 dark:text-gray-400 text-lg leading-relaxed">
+              <h3 className="text-lg sm:text-xl font-bold text-blue-600 mb-3">Nuestro Presente (2025)</h3>
+              <p className="text-gray-600 dark:text-gray-400 text-base sm:text-lg leading-relaxed">
                 Hoy, en Dictaminemos sumamos una experiencia combinada de más de 15 años, ofreciendo servicios
                 altamente especializados en dictámenes periciales y avalúos. Nuestro origen, basado en el conocimiento
                 legal y la especialización técnica, es la garantía de seguridad y precisión que ofrecemos a cada uno
@@ -149,28 +149,28 @@ export default function QuienesSomosPage() {
             </motion.div>
 
             <motion.div
-              initial={{ opacity: 0, x: 50 }}
-              whileInView={{ opacity: 1, x: 0 }}
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               className="relative"
             >
               <div className="bg-gradient-to-br from-blue-50 to-blue-100 dark:from-blue-900/20 dark:to-blue-800/20 p-8 rounded-lg border border-gray-200 dark:border-gray-700">
                 <div className="grid grid-cols-2 gap-6">
                   <div className="text-center">
-                    <div className="text-3xl font-bold text-blue-600 mb-2">2000</div>
-                    <p className="text-gray-700">Inicio de Trayectoria</p>
+                    <div className="text-2xl sm:text-3xl font-bold text-blue-600 mb-2">2000</div>
+                    <p className="text-sm sm:text-base text-gray-700">Inicio de Trayectoria</p>
                   </div>
                   <div className="text-center">
-                    <div className="text-3xl font-bold text-blue-600 mb-2">2023</div>
-                    <p className="text-gray-700">Fundación Dictaminemos</p>
+                    <div className="text-2xl sm:text-3xl font-bold text-blue-600 mb-2">2023</div>
+                    <p className="text-sm sm:text-base text-gray-700">Fundación Dictaminemos</p>
                   </div>
                   <div className="text-center">
-                    <div className="text-3xl font-bold text-blue-600 mb-2">2500+</div>
-                    <p className="text-gray-700">Avalúos Realizados</p>
+                    <div className="text-2xl sm:text-3xl font-bold text-blue-600 mb-2">2500+</div>
+                    <p className="text-sm sm:text-base text-gray-700">Avalúos Realizados</p>
                   </div>
                   <div className="text-center">
-                    <div className="text-3xl font-bold text-blue-600 mb-2">500+</div>
-                    <p className="text-gray-700">Clientes Satisfechos</p>
+                    <div className="text-2xl sm:text-3xl font-bold text-blue-600 mb-2">500+</div>
+                    <p className="text-sm sm:text-base text-gray-700">Clientes Satisfechos</p>
                   </div>
                 </div>
               </div>
@@ -282,8 +282,8 @@ export default function QuienesSomosPage() {
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-6">Nuestro Equipo</h2>
-            <p className="text-xl text-gray-600 dark:text-gray-400 max-w-3xl mx-auto">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-6 px-4">Nuestro Equipo</h2>
+            <p className="text-lg sm:text-xl text-gray-600 dark:text-gray-400 max-w-3xl mx-auto px-4">
               Contamos con un equipo multidisciplinario de profesionales altamente calificados y certificados
             </p>
           </motion.div>
@@ -340,10 +340,10 @@ export default function QuienesSomosPage() {
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-6">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-6 px-4">
               Certificaciones y Reconocimientos
             </h2>
-            <p className="text-xl text-gray-600 dark:text-gray-400 max-w-3xl mx-auto">
+            <p className="text-lg sm:text-xl text-gray-600 dark:text-gray-400 max-w-3xl mx-auto px-4">
               Nuestros profesionales cuentan con las certificaciones más importantes del sector
             </p>
           </motion.div>

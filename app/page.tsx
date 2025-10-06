@@ -174,7 +174,7 @@ export default function HomePage() {
           <motion.div initial={{ opacity: 0, y: 50 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 1 }}>
             {/* Main Title with Stagger Effect */}
             <motion.h1
-              className="text-5xl md:text-7xl font-bold mb-6"
+              className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-6"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 1, delay: 0.2 }}
@@ -198,7 +198,7 @@ export default function HomePage() {
               transition={{ duration: 0.8, delay: 1 }}
               className="relative"
             >
-              <p className="text-xl md:text-2xl mb-4 text-blue-200">Avalúos, Dictámenes y Topografía</p>
+              <p className="text-lg sm:text-xl md:text-2xl mb-4 text-blue-200">Avalúos, Dictámenes y Topografía</p>
               <motion.div
                 animate={{ width: ["0%", "100%"] }}
                 transition={{ duration: 1, delay: 1.5 }}
@@ -208,7 +208,7 @@ export default function HomePage() {
             </motion.div>
 
             <motion.p
-              className="text-lg md:text-xl mb-8 max-w-3xl mx-auto text-gray-200"
+              className="text-base sm:text-lg md:text-xl mb-8 max-w-3xl mx-auto text-gray-200 px-4"
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 1.8 }}
@@ -226,7 +226,7 @@ export default function HomePage() {
               <motion.div whileHover={{ scale: 1.05, y: -2 }} whileTap={{ scale: 0.95 }}>
                 <Button
                   size="lg"
-                  className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 text-lg shadow-lg"
+                  className="bg-blue-600 hover:bg-blue-700 text-white px-6 sm:px-8 py-2.5 sm:py-3 text-base sm:text-lg shadow-lg w-full sm:w-auto"
                   asChild
                 >
                   <Link href="/servicios">
@@ -236,7 +236,7 @@ export default function HomePage() {
                       transition={{ duration: 1.5, repeat: Number.POSITIVE_INFINITY }}
                       className="ml-2"
                     >
-                      <ArrowRight className="h-5 w-5" />
+                      <ArrowRight className="h-4 w-4 sm:h-5 sm:w-5" />
                     </motion.div>
                   </Link>
                 </Button>
@@ -246,7 +246,7 @@ export default function HomePage() {
                 <Button
                   size="lg"
                   variant="outline"
-                  className="border-white text-white hover:bg-white hover:text-blue-900 px-8 py-3 text-lg bg-transparent shadow-lg backdrop-blur-sm"
+                  className="border-white text-white hover:bg-white hover:text-blue-900 px-6 sm:px-8 py-2.5 sm:py-3 text-base sm:text-lg bg-transparent shadow-lg backdrop-blur-sm w-full sm:w-auto"
                   asChild
                 >
                   <Link href="/blog">Leer Blog</Link>
@@ -290,8 +290,8 @@ export default function HomePage() {
               transition={{ duration: 0.8 }}
               className="text-center"
             >
-              <div className="text-5xl font-bold text-blue-600 mb-2">{counters.experience}+</div>
-              <p className="text-xl text-gray-700">Años de Experiencia</p>
+              <div className="text-4xl sm:text-5xl font-bold text-blue-600 mb-2">{counters.experience}+</div>
+              <p className="text-lg sm:text-xl text-gray-700">Años de Experiencia</p>
             </motion.div>
             <motion.div
               initial={{ opacity: 0, y: 50 }}
@@ -299,8 +299,8 @@ export default function HomePage() {
               transition={{ duration: 0.8, delay: 0.2 }}
               className="text-center"
             >
-              <div className="text-5xl font-bold text-blue-600 mb-2">{counters.appraisals.toLocaleString()}+</div>
-              <p className="text-xl text-gray-700">Avalúos Realizados</p>
+              <div className="text-4xl sm:text-5xl font-bold text-blue-600 mb-2">{counters.appraisals.toLocaleString()}+</div>
+              <p className="text-lg sm:text-xl text-gray-700">Avalúos Realizados</p>
             </motion.div>
             <motion.div
               initial={{ opacity: 0, y: 50 }}
@@ -308,8 +308,8 @@ export default function HomePage() {
               transition={{ duration: 0.8, delay: 0.4 }}
               className="text-center"
             >
-              <div className="text-5xl font-bold text-blue-600 mb-2">{counters.clients}+</div>
-              <p className="text-xl text-gray-700">Clientes Satisfechos</p>
+              <div className="text-4xl sm:text-5xl font-bold text-blue-600 mb-2">{counters.clients}+</div>
+              <p className="text-lg sm:text-xl text-gray-700">Clientes Satisfechos</p>
             </motion.div>
           </div>
         </div>
@@ -324,8 +324,8 @@ export default function HomePage() {
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">¿Por Qué Elegirnos?</h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-6">¿Por Qué Elegirnos?</h2>
+            <p className="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto px-4">
               Somos líderes en el sector con un enfoque integral que combina experiencia, tecnología y compromiso
             </p>
           </motion.div>
@@ -390,18 +390,18 @@ export default function HomePage() {
       <section className="py-20 bg-blue-900 text-white">
         <div className="container mx-auto px-4 text-center">
           <motion.div initial={{ opacity: 0, y: 50 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }}>
-            <h2 className="text-4xl md:text-5xl font-bold mb-6">¿Necesitas un Avalúo o Dictamen?</h2>
-            <p className="text-xl mb-8 max-w-2xl mx-auto text-blue-100">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-6 px-4">¿Necesitas un Avalúo o Dictamen?</h2>
+            <p className="text-lg sm:text-xl mb-8 max-w-2xl mx-auto text-blue-100 px-4">
               Contáctanos hoy mismo y obtén una cotización personalizada para tu proyecto
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" className="bg-white text-blue-900 hover:bg-gray-100 px-8 py-3 text-lg" asChild>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center px-4">
+              <Button size="lg" className="bg-white text-blue-900 hover:bg-gray-100 px-6 sm:px-8 py-2.5 sm:py-3 text-base sm:text-lg w-full sm:w-auto" asChild>
                 <Link href="/contacto">Solicitar Cotización</Link>
               </Button>
               <Button
                 size="lg"
                 variant="outline"
-                className="border-white text-white hover:bg-white hover:text-blue-900 px-8 py-3 text-lg bg-transparent"
+                className="border-white text-white hover:bg-white hover:text-blue-900 px-6 sm:px-8 py-2.5 sm:py-3 text-base sm:text-lg bg-transparent w-full sm:w-auto"
                 asChild
               >
                 <Link href="/blog">Leer Nuestro Blog</Link>

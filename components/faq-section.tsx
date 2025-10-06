@@ -58,7 +58,7 @@ const faqCategories = [
     faqs: [
       {
         question: "¿Cómo puedo solicitar un avalúo con su empresa?",
-        answer: "Puedes hacerlo vía WhatsApp al 314 703 0835, correo a Dictaminemos@gmail.com o usando nuestro chat de WhatsApp en la web.",
+        answer: "Puedes hacerlo vía WhatsApp al 314 703 0835, correo a contacto@dictaminemos.com o usando nuestro chat de WhatsApp en la web.",
       },
       {
         question: "¿Realizan visitas físicas al inmueble?",
@@ -164,19 +164,19 @@ export function FAQSection() {
           transition={{ duration: 0.8 }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">Preguntas Frecuentes</h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-6 px-4">Preguntas Frecuentes</h2>
+          <p className="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto px-4">
             Encuentra respuestas a las 30 preguntas más comunes sobre nuestros servicios
           </p>
         </motion.div>
 
         <div className="max-w-5xl mx-auto">
           <Tabs defaultValue="avaluos" className="w-full">
-            <TabsList className="grid w-full max-w-3xl mx-auto grid-cols-4 mb-12">
-              <TabsTrigger value="avaluos">Avalúos</TabsTrigger>
-              <TabsTrigger value="proceso">Proceso</TabsTrigger>
-              <TabsTrigger value="costos">Costos</TabsTrigger>
-              <TabsTrigger value="empresa">Empresa</TabsTrigger>
+            <TabsList className="grid w-full max-w-3xl mx-auto grid-cols-2 sm:grid-cols-4 mb-12 h-auto gap-2">
+              <TabsTrigger value="avaluos" className="text-sm sm:text-base py-2 sm:py-3">Avalúos</TabsTrigger>
+              <TabsTrigger value="proceso" className="text-sm sm:text-base py-2 sm:py-3">Proceso</TabsTrigger>
+              <TabsTrigger value="costos" className="text-sm sm:text-base py-2 sm:py-3">Costos</TabsTrigger>
+              <TabsTrigger value="empresa" className="text-sm sm:text-base py-2 sm:py-3">Empresa</TabsTrigger>
             </TabsList>
 
             {faqCategories.map((category) => (
@@ -189,9 +189,9 @@ export function FAQSection() {
                       <div key={key} className="bg-white rounded-lg shadow-md overflow-hidden">
                         <button
                           onClick={() => setOpenIndex(isOpen ? null : key)}
-                          className="w-full p-6 hover:bg-gray-50 transition-colors text-left flex justify-between items-center"
+                          className="w-full p-4 sm:p-6 hover:bg-gray-50 transition-colors text-left flex justify-between items-center"
                         >
-                          <h3 className="text-lg font-semibold text-gray-900 pr-4">{faq.question}</h3>
+                          <h3 className="text-base sm:text-lg font-semibold text-gray-900 pr-4">{faq.question}</h3>
                           <ChevronDown
                             className={`h-5 w-5 text-gray-500 flex-shrink-0 transition-transform duration-200 ${isOpen ? "rotate-180" : ""}`}
                           />
@@ -205,8 +205,8 @@ export function FAQSection() {
                               transition={{ duration: 0.2, ease: "easeInOut" }}
                               className="overflow-hidden"
                             >
-                              <div className="px-6 pb-6 pt-2">
-                                <p className="text-gray-600 leading-relaxed">{faq.answer}</p>
+                              <div className="px-4 sm:px-6 pb-4 sm:pb-6 pt-2">
+                                <p className="text-sm sm:text-base text-gray-600 leading-relaxed">{faq.answer}</p>
                               </div>
                             </motion.div>
                           )}

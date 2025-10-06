@@ -213,7 +213,7 @@ export default function ContactoPage() {
             </motion.div>
 
             <motion.h1
-              className="text-5xl md:text-6xl font-bold mb-6"
+              className="text-4xl sm:text-5xl md:text-6xl font-bold mb-6 px-4"
               initial={{ opacity: 0, y: 50 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.5 }}
@@ -225,11 +225,11 @@ export default function ContactoPage() {
               initial={{ scaleX: 0 }}
               animate={{ scaleX: 1 }}
               transition={{ duration: 1, delay: 1 }}
-              className="h-1 w-48 bg-gradient-to-r from-teal-400 to-cyan-400 mx-auto mb-6"
+              className="h-1 w-36 sm:w-48 bg-gradient-to-r from-teal-400 to-cyan-400 mx-auto mb-6"
             />
 
             <motion.p
-              className="text-xl md:text-2xl max-w-3xl mx-auto text-teal-100"
+              className="text-lg sm:text-xl md:text-2xl max-w-3xl mx-auto text-teal-100 px-4"
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 1.2 }}
@@ -246,11 +246,11 @@ export default function ContactoPage() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             {/* Contact Information */}
             <motion.div
-              initial={{ opacity: 0, x: -50 }}
-              whileInView={{ opacity: 1, x: 0 }}
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
             >
-              <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-8">Información de Contacto</h2>
+              <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 dark:text-white mb-8">Información de Contacto</h2>
 
               <div className="space-y-6">
                 <div className="flex items-start space-x-4">
@@ -270,7 +270,7 @@ export default function ContactoPage() {
                   </div>
                   <div>
                     <h3 className="font-semibold text-gray-900 dark:text-white mb-1">Correo Electrónico</h3>
-                    <p className="text-gray-600 dark:text-gray-400">Dictaminemos@gmail.com</p>
+                    <p className="text-gray-600 dark:text-gray-400">contacto@dictaminemos.com</p>
                   </div>
                 </div>
 
@@ -333,13 +333,13 @@ export default function ContactoPage() {
 
             {/* Contact Form */}
             <motion.div
-              initial={{ opacity: 0, x: 50 }}
-              whileInView={{ opacity: 1, x: 0 }}
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
             >
               <Card className="bg-white dark:bg-gray-800 border-gray-200 dark:border-gray-700">
                 <CardContent className="p-8">
-                  <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-6">Cotiza con nosotros</h2>
+                  <h2 className="text-xl sm:text-2xl font-bold text-gray-900 dark:text-white mb-6">Cotiza con nosotros</h2>
                   <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                       <div>
@@ -504,15 +504,16 @@ export default function ContactoPage() {
             transition={{ duration: 0.8 }}
             className="text-center mb-12"
           >
-            <h2 className="text-4xl font-bold text-gray-900 dark:text-white mb-6">Nuestra Ubicación</h2>
-            <p className="text-xl text-gray-600 dark:text-gray-400">Visítanos en nuestra oficina principal en Medellín</p>
+            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 dark:text-white mb-6 px-4">Nuestra Ubicación</h2>
+            <p className="text-lg sm:text-xl text-gray-600 dark:text-gray-400 px-4">Visítanos en nuestra oficina principal en Medellín</p>
           </motion.div>
 
           <div className="rounded-lg overflow-hidden shadow-lg">
             <iframe
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.1234567890123!2d-75.5698!3d6.2518!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e4428dfb80fad05%3A0x42137cfcc079e925!2sCalle%2051%20%2349-11%2C%20Medell%C3%ADn%2C%20Antioquia%2C%20Colombia!5e0!3m2!1ses!2sco!4v1234567890123!5m2!1ses!2sco"
               width="100%"
-              height="450"
+              height="350"
+              className="sm:h-[450px]"
               style={{ border: 0 }}
               allowFullScreen
               loading="lazy"
@@ -532,8 +533,8 @@ export default function ContactoPage() {
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl font-bold text-gray-900 dark:text-white mb-6">Cobertura Nacional</h2>
-            <p className="text-xl text-gray-600 dark:text-gray-400 max-w-3xl mx-auto">
+            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 dark:text-white mb-6 px-4">Cobertura Nacional</h2>
+            <p className="text-lg sm:text-xl text-gray-600 dark:text-gray-400 max-w-3xl mx-auto px-4">
               Atendemos proyectos en todo el territorio colombiano con el mismo nivel de calidad y profesionalismo
             </p>
           </motion.div>

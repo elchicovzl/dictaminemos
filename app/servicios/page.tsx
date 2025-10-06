@@ -250,9 +250,9 @@ export default function ServiciosPage() {
             transition={{ duration: 0.8 }}
             className="text-center"
           >
-            <h1 className="text-5xl md:text-6xl font-bold mb-6">Nuestros Servicios</h1>
-            <div className="h-1 w-64 bg-gradient-to-r from-blue-400 to-cyan-400 mx-auto mb-6" />
-            <p className="text-xl md:text-2xl max-w-3xl mx-auto text-blue-100">
+            <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-6 px-4">Nuestros Servicios</h1>
+            <div className="h-1 w-48 sm:w-64 bg-gradient-to-r from-blue-400 to-cyan-400 mx-auto mb-6" />
+            <p className="text-lg sm:text-xl md:text-2xl max-w-3xl mx-auto text-blue-100 px-4">
               Soluciones completas en avalúos, dictámenes técnicos y topografía
             </p>
           </motion.div>
@@ -263,17 +263,17 @@ export default function ServiciosPage() {
       <section className="py-20">
         <div className="container mx-auto px-4">
           <Tabs defaultValue="avaluos" className="w-full">
-            <TabsList className="grid w-full max-w-2xl mx-auto grid-cols-3 mb-12">
-              <TabsTrigger value="avaluos">Avalúos</TabsTrigger>
-              <TabsTrigger value="dictamenes">Dictámenes</TabsTrigger>
-              <TabsTrigger value="topografia">Topografía</TabsTrigger>
+            <TabsList className="grid w-full max-w-2xl mx-auto grid-cols-3 mb-12 h-auto">
+              <TabsTrigger value="avaluos" className="text-sm sm:text-base py-2 sm:py-3">Avalúos</TabsTrigger>
+              <TabsTrigger value="dictamenes" className="text-sm sm:text-base py-2 sm:py-3">Dictámenes</TabsTrigger>
+              <TabsTrigger value="topografia" className="text-sm sm:text-base py-2 sm:py-3">Topografía</TabsTrigger>
             </TabsList>
 
             {/* Avalúos Content */}
             <TabsContent value="avaluos">
-              <div className="text-center mb-12">
-                <h2 className="text-4xl font-bold text-gray-900 mb-4">Servicios de Avalúo</h2>
-                <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              <div className="text-center mb-12 px-4">
+                <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">Servicios de Avalúo</h2>
+                <p className="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto">
                   14 tipos especializados de avalúos para todas tus necesidades
                 </p>
               </div>
@@ -310,9 +310,9 @@ export default function ServiciosPage() {
 
             {/* Dictámenes Content */}
             <TabsContent value="dictamenes">
-              <div className="text-center mb-12">
-                <h2 className="text-4xl font-bold text-gray-900 mb-4">Dictámenes Periciales</h2>
-                <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              <div className="text-center mb-12 px-4">
+                <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">Dictámenes Periciales</h2>
+                <p className="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto">
                   La prueba técnica a tu favor en procesos judiciales y extrajudiciales
                 </p>
               </div>
@@ -321,8 +321,8 @@ export default function ServiciosPage() {
                 {dictamenesServices.map((category, index) => (
                   <motion.div
                     key={index}
-                    initial={{ opacity: 0, x: -50 }}
-                    whileInView={{ opacity: 1, x: 0 }}
+                    initial={{ opacity: 0, y: 50 }}
+                    whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.6, delay: index * 0.1 }}
                   >
                     <Card>
@@ -367,9 +367,9 @@ export default function ServiciosPage() {
 
             {/* Topografía Content */}
             <TabsContent value="topografia">
-              <div className="text-center mb-12">
-                <h2 className="text-4xl font-bold text-gray-900 mb-4">Topografía y Drones</h2>
-                <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              <div className="text-center mb-12 px-4">
+                <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">Topografía y Drones</h2>
+                <p className="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto">
                   Precisión desde el cielo con tecnología de punta
                 </p>
               </div>
@@ -436,14 +436,14 @@ export default function ServiciosPage() {
       {/* Process Section */}
       <section className="py-20 bg-gray-50">
         <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-6">Nuestro Proceso Técnico</h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          <div className="text-center mb-16 px-4">
+            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-6">Nuestro Proceso Técnico</h2>
+            <p className="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto">
               Precisión en cada paso para garantizar resultados exactos y confiables
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-5 gap-8 max-w-6xl mx-auto">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8 max-w-6xl mx-auto">
             {[
               { step: "01", title: "Inspección Inicial", description: "Visita y reconocimiento completo del inmueble" },
               { step: "02", title: "Levantamiento Topográfico", description: "Medición precisa con tecnología moderna" },
@@ -473,18 +473,18 @@ export default function ServiciosPage() {
       <section className="py-20 bg-blue-900 text-white">
         <div className="container mx-auto px-4 text-center">
           <motion.div initial={{ opacity: 0, y: 50 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }}>
-            <h2 className="text-4xl md:text-5xl font-bold mb-6">¿Necesitas Alguno de Estos Servicios?</h2>
-            <p className="text-xl mb-8 max-w-2xl mx-auto text-blue-100">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-6 px-4">¿Necesitas Alguno de Estos Servicios?</h2>
+            <p className="text-lg sm:text-xl mb-8 max-w-2xl mx-auto text-blue-100 px-4">
               Contáctanos para obtener una cotización personalizada y sin compromiso
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" className="bg-white text-blue-900 hover:bg-gray-100 px-8 py-3 text-lg" asChild>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center px-4">
+              <Button size="lg" className="bg-white text-blue-900 hover:bg-gray-100 px-6 sm:px-8 py-2.5 sm:py-3 text-base sm:text-lg w-full sm:w-auto" asChild>
                 <Link href="/contacto">Solicitar Cotización</Link>
               </Button>
               <Button
                 size="lg"
                 variant="outline"
-                className="border-2 border-white text-white hover:bg-white hover:text-blue-900 px-8 py-3 text-lg bg-transparent backdrop-blur-sm"
+                className="border-2 border-white text-white hover:bg-white hover:text-blue-900 px-6 sm:px-8 py-2.5 sm:py-3 text-base sm:text-lg bg-transparent backdrop-blur-sm w-full sm:w-auto"
                 asChild
               >
                 <Link href="/blog">Conoce Más en Nuestro Blog</Link>

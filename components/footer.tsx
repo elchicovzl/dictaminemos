@@ -6,8 +6,8 @@ export function Footer() {
   return (
     <footer className="bg-gray-900 text-white py-12">
       <div className="container mx-auto px-4">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-          <div>
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+          <div className="col-span-2 md:col-span-1">
             <Image
               src="/images/logo.svg"
               alt="Dictaminemos - Avalúos, Dictámenes y Topografía"
@@ -15,7 +15,7 @@ export function Footer() {
               height={60}
               className="h-12 w-auto mb-4 brightness-0 invert"
             />
-            <p className="text-gray-400 mb-4">
+            <p className="text-sm sm:text-base text-gray-400 mb-4">
               Especialistas en avalúos, dictámenes y topografía con más de 15 años de experiencia en el sector.
             </p>
             <div className="flex space-x-4">
@@ -41,8 +41,8 @@ export function Footer() {
           </div>
 
           <div>
-            <h4 className="text-lg font-semibold mb-4">Servicios</h4>
-            <ul className="space-y-2 text-gray-400">
+            <h4 className="text-base sm:text-lg font-semibold mb-4">Servicios</h4>
+            <ul className="space-y-2 text-sm sm:text-base text-gray-400">
               <li>
                 <Link href="/servicios" className="hover:text-white transition-colors">
                   Avalúos Inmobiliarios
@@ -72,8 +72,8 @@ export function Footer() {
           </div>
 
           <div>
-            <h4 className="text-lg font-semibold mb-4">Enlaces</h4>
-            <ul className="space-y-2 text-gray-400">
+            <h4 className="text-base sm:text-lg font-semibold mb-4">Enlaces</h4>
+            <ul className="space-y-2 text-sm sm:text-base text-gray-400">
               <li>
                 <Link href="/" className="hover:text-white transition-colors">
                   Inicio
@@ -102,16 +102,16 @@ export function Footer() {
             </ul>
           </div>
 
-          <div>
-            <h4 className="text-lg font-semibold mb-4">Contacto</h4>
-            <ul className="space-y-3 text-gray-400">
+          <div className="col-span-2 md:col-span-1">
+            <h4 className="text-base sm:text-lg font-semibold mb-4">Contacto</h4>
+            <ul className="space-y-3 text-sm sm:text-base text-gray-400">
               <li className="flex items-center space-x-2">
                 <Phone className="h-4 w-4" />
                 <span>314 703 0835</span>
               </li>
               <li className="flex items-center space-x-2">
                 <Mail className="h-4 w-4" />
-                <span>Dictaminemos@gmail.com</span>
+                <span>contacto@dictaminemos.com</span>
               </li>
               <li className="flex items-start space-x-2">
                 <MapPin className="h-4 w-4 mt-1" />
@@ -127,7 +127,7 @@ export function Footer() {
           </div>
         </div>
 
-        <div className="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
+        <div className="border-t border-gray-800 mt-8 pt-8 text-center text-sm sm:text-base text-gray-400">
           <p>&copy; 2025 Dictaminemos. Todos los derechos reservados.</p>
         </div>
       </div>

@@ -102,8 +102,8 @@ export function ServicesSlider() {
           transition={{ duration: 0.8 }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">Nuestros Servicios Especializados</h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-6 px-4">Nuestros Servicios Especializados</h2>
+          <p className="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto px-4">
             Descubre nuestra amplia gama de servicios profesionales
           </p>
         </motion.div>
@@ -117,17 +117,17 @@ export function ServicesSlider() {
               }}
             >
               {services.map((service, index) => (
-                <div key={index} className="flex-shrink-0 px-4" style={{ width: `${100 / slidesToShow}%` }}>
+                <div key={index} className="flex-shrink-0 px-2 sm:px-4" style={{ width: `${100 / slidesToShow}%` }}>
                   <Card className="h-full hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
-                    <CardContent className="p-6">
+                    <CardContent className="p-4 sm:p-6">
                       <div
-                        className={`w-16 h-16 rounded-lg bg-gradient-to-r ${service.color} flex items-center justify-center mb-6`}
+                        className={`w-12 h-12 sm:w-16 sm:h-16 rounded-lg bg-gradient-to-r ${service.color} flex items-center justify-center mb-4 sm:mb-6`}
                       >
-                        <service.icon className="h-8 w-8 text-white" />
+                        <service.icon className="h-6 w-6 sm:h-8 sm:w-8 text-white" />
                       </div>
 
-                      <h3 className="text-xl font-bold text-gray-900 mb-3">{service.title}</h3>
-                      <p className="text-gray-600 mb-4 leading-relaxed">{service.description}</p>
+                      <h3 className="text-lg sm:text-xl font-bold text-gray-900 mb-2 sm:mb-3">{service.title}</h3>
+                      <p className="text-sm sm:text-base text-gray-600 mb-3 sm:mb-4 leading-relaxed">{service.description}</p>
 
                       <div className="space-y-2">
                         {service.features.map((feature, featureIndex) => (
@@ -149,18 +149,18 @@ export function ServicesSlider() {
             variant="outline"
             size="sm"
             onClick={prevSlide}
-            className="absolute left-0 top-1/2 transform -translate-y-1/2 -translate-x-4 rounded-full w-12 h-12 p-0 bg-white shadow-lg hover:shadow-xl z-10"
+            className="absolute left-0 sm:left-2 top-1/2 transform -translate-y-1/2 -translate-x-2 sm:-translate-x-4 rounded-full w-10 h-10 sm:w-12 sm:h-12 p-0 bg-white shadow-lg hover:shadow-xl z-10"
           >
-            <ChevronLeft className="h-5 w-5" />
+            <ChevronLeft className="h-4 w-4 sm:h-5 sm:w-5" />
           </Button>
 
           <Button
             variant="outline"
             size="sm"
             onClick={nextSlide}
-            className="absolute right-0 top-1/2 transform -translate-y-1/2 translate-x-4 rounded-full w-12 h-12 p-0 bg-white shadow-lg hover:shadow-xl z-10"
+            className="absolute right-0 sm:right-2 top-1/2 transform -translate-y-1/2 translate-x-2 sm:translate-x-4 rounded-full w-10 h-10 sm:w-12 sm:h-12 p-0 bg-white shadow-lg hover:shadow-xl z-10"
           >
-            <ChevronRight className="h-5 w-5" />
+            <ChevronRight className="h-4 w-4 sm:h-5 sm:w-5" />
           </Button>
 
           {/* Progress Indicator */}
