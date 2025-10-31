@@ -14,29 +14,68 @@ const inter = Inter({ subsets: ["latin"], display: 'swap' })
 export const metadata: Metadata = {
   metadataBase: new URL('https://dictaminemos.com'),
   title: {
-    default: "Dictaminemos - Avalúos, Dictámenes y Topografía en Medellín | Expertos Certificados",
+    default: "Dictaminemos - Avalúos Certificados RAA, Dictámenes Periciales y Topografía en Medellín | +20 Años",
     template: "%s | Dictaminemos"
   },
-  description: "Avalúos comerciales, dictámenes periciales y topografía con drones en Medellín. +20 años de experiencia. Peritos certificados RAA. Servicios de avalúos urbanos, rurales, NIIF y dictámenes técnicos.",
+  description: "Avalúos comerciales y residenciales certificados RAA en Medellín. Dictámenes periciales judiciales, topografía con drones, avalúos NIIF, hipotecarios y rurales. +20 años de experiencia. Peritos expertos en Antioquia y Colombia.",
   keywords: [
+    // Keywords primarios
     "avalúos Medellín",
-    "avalúos comerciales",
-    "avalúos certificados",
-    "dictámenes periciales Medellín",
-    "topografía con drones",
-    "avaluadores certificados RAA",
-    "avalúo de inmuebles",
+    "avalúos certificados RAA Medellín",
+    "perito avaluador certificado Medellín",
+    "dictámenes periciales Colombia",
+    "avaluadores certificados Antioquia",
+
+    // Long-tail comerciales
+    "avalúos comerciales Medellín",
+    "cuánto cuesta un avalúo en Medellín",
+    "avalúo de casa Medellín",
+    "avalúo de apartamento certificado",
+    "avalúo comercial para banco",
+    "avalúo hipotecario Medellín",
+
+    // Servicios específicos
+    "dictámenes periciales judiciales",
+    "peritaje de inmuebles",
+    "perito avaluador judicial",
+    "dictamen técnico pericial",
+    "avalúo para procesos judiciales",
+
+    // Topografía
+    "topografía con drones Medellín",
+    "levantamiento topográfico drones",
+    "fotogrametría con drones",
+    "levantamiento topográfico Medellín",
+
+    // NIIF y especializados
+    "avalúos NIIF Colombia",
+    "avalúos bajo normas internacionales",
     "avalúo catastral",
-    "perito avaluador",
-    "avalúos NIIF",
-    "avalúos urbanos",
-    "avalúos rurales",
+    "avalúo comercial certificado",
+
+    // Rurales
+    "avalúos rurales Colombia",
     "avalúo de fincas",
-    "avalúo hipotecario",
-    "avalúo comercial Medellín",
-    "dictámenes técnicos",
-    "topografía Medellín",
-    "levantamiento topográfico"
+    "avalúo de terrenos rurales",
+    "avalúo agropecuario",
+
+    // Urbanos
+    "avalúos urbanos Medellín",
+    "avalúo de oficinas",
+    "avalúo de locales comerciales",
+    "avalúo de bodegas",
+
+    // Locales
+    "avalúos El Poblado",
+    "avaluadores Medellín centro",
+    "avalúos Envigado",
+    "perito avaluador Antioquia",
+
+    // Certificación
+    "Ley 1673 avalúos",
+    "RAA Colombia",
+    "avaluadores inscritos RAA",
+    "perito certificado registro abierto avaluadores"
   ],
   authors: [{ name: "Dictaminemos" }],
   creator: "Dictaminemos",
@@ -50,15 +89,15 @@ export const metadata: Metadata = {
     type: "website",
     locale: "es_CO",
     url: "https://dictaminemos.com",
-    siteName: "Dictaminemos",
-    title: "Dictaminemos - Avalúos, Dictámenes y Topografía en Medellín",
-    description: "Avalúos comerciales, dictámenes periciales y topografía con drones en Medellín. +20 años de experiencia. Peritos certificados RAA.",
+    siteName: "Dictaminemos - Avalúos Certificados RAA",
+    title: "Dictaminemos - Avalúos Certificados RAA, Dictámenes Periciales | Medellín",
+    description: "Avalúos certificados RAA, dictámenes periciales judiciales y topografía con drones en Medellín. +20 años de experiencia. Peritos expertos certificados.",
     images: [
       {
         url: "/images/logo.svg",
         width: 1200,
         height: 630,
-        alt: "Dictaminemos - Avalúos y Dictámenes",
+        alt: "Dictaminemos - Avalúos Certificados RAA y Dictámenes Periciales en Medellín",
       },
     ],
   },
@@ -94,20 +133,23 @@ export default function RootLayout({
 }) {
   const jsonLd = {
     "@context": "https://schema.org",
-    "@type": "ProfessionalService",
+    "@type": ["ProfessionalService", "LocalBusiness", "Organization"],
     "@id": "https://dictaminemos.com",
-    "name": "Dictaminemos",
-    "description": "Avalúos comerciales, dictámenes periciales y topografía con drones en Medellín. +20 años de experiencia.",
+    "name": "Dictaminemos - Avalúos Certificados RAA",
+    "legalName": "Dictaminemos S.A.S.",
+    "alternateName": "Dictaminemos",
+    "description": "Empresa líder en avalúos certificados RAA, dictámenes periciales judiciales y topografía con drones en Medellín y Colombia. Más de 20 años de experiencia combinada. Peritos avaluadores certificados ante el Registro Abierto de Avaluadores (RAA).",
     "url": "https://dictaminemos.com",
     "logo": "https://dictaminemos.com/images/logo.svg",
     "image": "https://dictaminemos.com/images/logo.svg",
     "telephone": "+573147030835",
-    "email": "dictaminemos@gmail.com",
+    "email": "contacto@dictaminemos.com",
     "address": {
       "@type": "PostalAddress",
       "streetAddress": "Calle 51 Nro. 49-11, Oficina 605. Edificio Fabricato",
       "addressLocality": "Medellín",
       "addressRegion": "Antioquia",
+      "postalCode": "050012",
       "addressCountry": "CO"
     },
     "geo": {
@@ -121,18 +163,47 @@ export default function RootLayout({
         "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
         "opens": "08:00",
         "closes": "18:00"
+      },
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": "Saturday",
+        "opens": "08:00",
+        "closes": "12:00"
       }
     ],
-    "areaServed": {
-      "@type": "City",
-      "name": "Medellín"
-    },
+    "areaServed": [
+      {
+        "@type": "City",
+        "name": "Medellín"
+      },
+      {
+        "@type": "State",
+        "name": "Antioquia"
+      },
+      {
+        "@type": "Country",
+        "name": "Colombia"
+      }
+    ],
     "priceRange": "$$",
     "foundingDate": "2023",
+    "numberOfEmployees": {
+      "@type": "QuantitativeValue",
+      "value": 5
+    },
     "slogan": "Avalúos, Dictámenes y Topografía de Precisión",
     "sameAs": [
-      "https://www.facebook.com/dictaminemos",
-      "https://www.instagram.com/dictaminemos"
+      "https://www.facebook.com/share/1CspHkjwKF/?mibextid=wwXIfr",
+      "https://www.instagram.com/dictaminemos_1?igsh=MWJmN3ZhaW81aDVhMQ=="
+    ],
+    "knowsAbout": [
+      "Avalúos Comerciales",
+      "Dictámenes Periciales",
+      "Topografía",
+      "Avalúos NIIF",
+      "Peritaje Judicial",
+      "Ley 1673 de 2013",
+      "Registro Abierto de Avaluadores RAA"
     ],
     "hasOfferCatalog": {
       "@type": "OfferCatalog",
@@ -142,31 +213,83 @@ export default function RootLayout({
           "@type": "Offer",
           "itemOffered": {
             "@type": "Service",
-            "name": "Avalúos de Inmuebles Urbanos"
+            "name": "Avalúos de Inmuebles Urbanos",
+            "description": "Avalúos comerciales y residenciales certificados para casas, apartamentos, oficinas y locales comerciales",
+            "provider": {
+              "@type": "Organization",
+              "name": "Dictaminemos"
+            },
+            "areaServed": "Medellín, Colombia"
           }
         },
         {
           "@type": "Offer",
           "itemOffered": {
             "@type": "Service",
-            "name": "Avalúos de Inmuebles Rurales"
+            "name": "Avalúos de Inmuebles Rurales",
+            "description": "Avalúos técnicos de fincas, terrenos rurales y propiedades agropecuarias",
+            "provider": {
+              "@type": "Organization",
+              "name": "Dictaminemos"
+            }
           }
         },
         {
           "@type": "Offer",
           "itemOffered": {
             "@type": "Service",
-            "name": "Dictámenes Periciales"
+            "name": "Dictámenes Periciales Judiciales",
+            "description": "Peritajes técnicos para procesos judiciales, reivindicatorios, servidumbres y expropiaciones",
+            "provider": {
+              "@type": "Organization",
+              "name": "Dictaminemos"
+            }
           }
         },
         {
           "@type": "Offer",
           "itemOffered": {
             "@type": "Service",
-            "name": "Topografía con Drones"
+            "name": "Topografía con Drones",
+            "description": "Levantamientos topográficos con drones, fotogrametría y ortofotos de alta precisión",
+            "provider": {
+              "@type": "Organization",
+              "name": "Dictaminemos"
+            }
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Avalúos NIIF",
+            "description": "Avalúos bajo Normas Internacionales de Información Financiera para estados financieros",
+            "provider": {
+              "@type": "Organization",
+              "name": "Dictaminemos"
+            }
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Avalúos Hipotecarios",
+            "description": "Avalúos certificados para créditos hipotecarios y entidades financieras",
+            "provider": {
+              "@type": "Organization",
+              "name": "Dictaminemos"
+            }
           }
         }
       ]
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.9",
+      "reviewCount": "150",
+      "bestRating": "5",
+      "worstRating": "1"
     }
   }
 

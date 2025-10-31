@@ -97,8 +97,7 @@ export default function QuienesSomosPage() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 1.2 }}
             >
-              Una empresa líder en servicios de avalúos, dictámenes técnicos y topografía con más de 20 años de
-              experiencia
+              Empresa líder en avalúos certificados RAA, dictámenes periciales y topografía en Medellín. Más de 20 años de experiencia combinada
             </motion.p>
           </motion.div>
         </div>

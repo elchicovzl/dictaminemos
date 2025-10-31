@@ -184,7 +184,7 @@ export default function HomePage() {
                   key={index}
                   initial={{ opacity: 0, y: 50 }}
                   animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, delay: 0.3 + index * 0.1 }}
+                  transition={{ duration: 0.5, delay: 0.3 + index * 0.05 }}
                   className="inline-block"
                 >
                   {letter}
@@ -198,7 +198,7 @@ export default function HomePage() {
               transition={{ duration: 0.8, delay: 1 }}
               className="relative"
             >
-              <p className="text-lg sm:text-xl md:text-2xl mb-4 text-blue-200">Avalúos, Dictámenes y Topografía</p>
+              <h2 className="text-lg sm:text-xl md:text-2xl mb-4 text-blue-200 font-semibold">Dictaminemos - Dictámenes Periciales y Topografía con Drones</h2>
               <motion.div
                 animate={{ width: ["0%", "100%"] }}
                 transition={{ duration: 1, delay: 1.5 }}
@@ -213,8 +213,7 @@ export default function HomePage() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 1.8 }}
             >
-              Especialistas en Derecho, Arquitectura y Tecnología Catastral con más de 20 años de experiencia brindando
-              soluciones integrales
+              Peritos avaluadores certificados RAA en Medellín. Especialistas en avalúos comerciales, residenciales y rurales con más de 20 años de experiencia. Dictámenes periciales judiciales y topografía de precisión
             </motion.p>
 
             <motion.div

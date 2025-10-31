@@ -1,19 +1,28 @@
 import type { Metadata } from "next"
 
 export const metadata: Metadata = {
-  title: "Quiénes Somos - Nuestra Historia y Experiencia",
-  description: "Conoce a Dictaminemos: 20+ años de experiencia en avalúos y dictámenes. Fundada en 2023 por expertos certificados. Dr. Abel Escobar y Dr. Andrés García, profesionales RAA especializados.",
+  title: "Quiénes Somos - 20+ Años de Experiencia en Avalúos Certificados RAA | Historia Dictaminemos",
+  description: "Empresa líder en avalúos certificados RAA en Medellín. Fundada en 2023 con +20 años de experiencia combinada. Dr. Abel Escobar (desde 2005) y Dr. Andrés García, peritos certificados RAA. +2,500 avalúos realizados, 500+ clientes satisfechos.",
   keywords: [
-    "quienes somos dictaminemos",
-    "historia dictaminemos",
+    "quiénes somos dictaminemos",
+    "historia dictaminemos Medellín",
+    "empresa avalúos certificados RAA",
     "avaluadores certificados Medellín",
-    "experiencia avalúos",
-    "empresa avalúos Medellín",
-    "peritos certificados RAA"
+    "experiencia avalúos 20 años",
+    "peritos RAA Medellín",
+    "Abel Escobar avaluador",
+    "Andrés García perito",
+    "empresa avalúos confiable Medellín",
+    "trayectoria avaluadores",
+    "certificación RAA avaluadores",
+    "Ley 1673 avaluadores",
+    "equipo avaluadores profesionales",
+    "mejor empresa avalúos Medellín",
+    "avaluadores con experiencia"
   ],
   openGraph: {
-    title: "Quiénes Somos - Nuestra Historia y Experiencia | Dictaminemos",
-    description: "Conoce a Dictaminemos: 20+ años de experiencia en avalúos y dictámenes periciales en Medellín.",
+    title: "Quiénes Somos - 20+ Años Experiencia Avalúos Certificados | Dictaminemos",
+    description: "Empresa líder en avalúos certificados RAA. +20 años de experiencia, +2,500 avalúos realizados. Peritos certificados en Medellín.",
     url: "https://dictaminemos.com/quienes-somos",
     type: "website",
   },

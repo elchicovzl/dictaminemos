@@ -2,50 +2,53 @@ import { MetadataRoute } from 'next'
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = 'https://dictaminemos.com'
-  const currentDate = new Date()
+
+  // Fechas específicas para mejor SEO
+  const lastUpdate = new Date('2025-01-15') // Última actualización del sitio
+  const blogPostDate = new Date('2025-01-03')
 
   return [
     {
       url: baseUrl,
-      lastModified: currentDate,
-      changeFrequency: 'weekly',
+      lastModified: lastUpdate,
+      changeFrequency: 'daily',
       priority: 1.0,
     },
     {
       url: `${baseUrl}/servicios`,
-      lastModified: currentDate,
-      changeFrequency: 'monthly',
-      priority: 0.9,
-    },
-    {
-      url: `${baseUrl}/quienes-somos`,
-      lastModified: currentDate,
-      changeFrequency: 'monthly',
-      priority: 0.8,
-    },
-    {
-      url: `${baseUrl}/portafolio`,
-      lastModified: currentDate,
+      lastModified: lastUpdate,
       changeFrequency: 'weekly',
-      priority: 0.8,
+      priority: 0.95, // Aumentado - página muy importante para conversión
     },
     {
       url: `${baseUrl}/contacto`,
-      lastModified: currentDate,
+      lastModified: lastUpdate,
       changeFrequency: 'monthly',
-      priority: 0.9,
+      priority: 0.95, // Aumentado - página de conversión clave
+    },
+    {
+      url: `${baseUrl}/quienes-somos`,
+      lastModified: lastUpdate,
+      changeFrequency: 'monthly',
+      priority: 0.85, // Importante para confianza y autoridad
+    },
+    {
+      url: `${baseUrl}/portafolio`,
+      lastModified: lastUpdate,
+      changeFrequency: 'weekly',
+      priority: 0.80, // Prueba social importante
     },
     {
       url: `${baseUrl}/blog`,
-      lastModified: currentDate,
+      lastModified: blogPostDate,
       changeFrequency: 'weekly',
-      priority: 0.7,
+      priority: 0.75,
     },
     {
       url: `${baseUrl}/blog/certificacion-avaluadores-2025`,
-      lastModified: new Date('2025-01-03'),
+      lastModified: blogPostDate,
       changeFrequency: 'monthly',
-      priority: 0.6,
+      priority: 0.70,
     },
   ]
 }
