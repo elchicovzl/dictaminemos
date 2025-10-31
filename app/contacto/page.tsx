@@ -107,7 +107,7 @@ export default function ContactoPage() {
   }
 
   return (
-    <div className="min-h-screen bg-white dark:bg-gray-900">
+    <div className="min-h-screen bg-white">
       {/* Hero Section */}
       <section className="relative py-20 bg-gradient-to-br from-teal-900 via-blue-900 to-cyan-800 text-white overflow-hidden">
         {/* Communication Elements */}
@@ -250,60 +250,60 @@ export default function ContactoPage() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
             >
-              <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 dark:text-white mb-8">Información de Contacto</h2>
+              <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-8">Información de Contacto</h2>
 
               <div className="space-y-6">
                 <div className="flex items-start space-x-4">
-                  <div className="flex items-center justify-center w-12 h-12 bg-blue-100 dark:bg-blue-900/30 rounded-lg flex-shrink-0">
-                    <Phone className="h-6 w-6 text-blue-600 dark:text-blue-400" />
+                  <div className="flex items-center justify-center w-12 h-12 bg-blue-100 rounded-lg flex-shrink-0">
+                    <Phone className="h-6 w-6 text-blue-600" />
                   </div>
                   <div>
-                    <h3 className="font-semibold text-gray-900 dark:text-white mb-1">Teléfono</h3>
-                    <p className="text-gray-600 dark:text-gray-400">314 703 0835</p>
-                    <p className="text-sm text-gray-500 dark:text-gray-500 mt-1">WhatsApp disponible</p>
+                    <h3 className="font-semibold text-gray-900 mb-1">Teléfono</h3>
+                    <p className="text-gray-600">314 703 0835</p>
+                    <p className="text-sm text-gray-500 mt-1">WhatsApp disponible</p>
                   </div>
                 </div>
 
                 <div className="flex items-start space-x-4">
-                  <div className="flex items-center justify-center w-12 h-12 bg-blue-100 dark:bg-blue-900/30 rounded-lg flex-shrink-0">
-                    <Mail className="h-6 w-6 text-blue-600 dark:text-blue-400" />
+                  <div className="flex items-center justify-center w-12 h-12 bg-blue-100 rounded-lg flex-shrink-0">
+                    <Mail className="h-6 w-6 text-blue-600" />
                   </div>
                   <div>
-                    <h3 className="font-semibold text-gray-900 dark:text-white mb-1">Correo Electrónico</h3>
-                    <p className="text-gray-600 dark:text-gray-400">contacto@dictaminemos.com</p>
+                    <h3 className="font-semibold text-gray-900 mb-1">Correo Electrónico</h3>
+                    <p className="text-gray-600">contacto@dictaminemos.com</p>
                   </div>
                 </div>
 
                 <div className="flex items-start space-x-4">
-                  <div className="flex items-center justify-center w-12 h-12 bg-blue-100 dark:bg-blue-900/30 rounded-lg flex-shrink-0">
-                    <MapPin className="h-6 w-6 text-blue-600 dark:text-blue-400" />
+                  <div className="flex items-center justify-center w-12 h-12 bg-blue-100 rounded-lg flex-shrink-0">
+                    <MapPin className="h-6 w-6 text-blue-600" />
                   </div>
                   <div>
-                    <h3 className="font-semibold text-gray-900 dark:text-white mb-1">Dirección</h3>
-                    <p className="text-gray-600 dark:text-gray-400">Calle 51 Nro. 49-11, Oficina 605</p>
-                    <p className="text-gray-600 dark:text-gray-400">Edificio Fabricato, Medellín</p>
-                    <p className="text-sm text-gray-500 dark:text-gray-500 mt-1">
+                    <h3 className="font-semibold text-gray-900 mb-1">Dirección</h3>
+                    <p className="text-gray-600">Calle 51 Nro. 49-11, Oficina 605</p>
+                    <p className="text-gray-600">Edificio Fabricato, Medellín</p>
+                    <p className="text-sm text-gray-500 mt-1">
                       Cerca a la estación del metro Parque Berrío
                     </p>
                   </div>
                 </div>
 
                 <div className="flex items-start space-x-4">
-                  <div className="flex items-center justify-center w-12 h-12 bg-blue-100 dark:bg-blue-900/30 rounded-lg flex-shrink-0">
-                    <Clock className="h-6 w-6 text-blue-600 dark:text-blue-400" />
+                  <div className="flex items-center justify-center w-12 h-12 bg-blue-100 rounded-lg flex-shrink-0">
+                    <Clock className="h-6 w-6 text-blue-600" />
                   </div>
                   <div>
-                    <h3 className="font-semibold text-gray-900 dark:text-white mb-1">Horarios de Atención</h3>
-                    <p className="text-gray-600 dark:text-gray-400">Lunes a Viernes: 8:00 AM - 6:00 PM</p>
-                    <p className="text-gray-600 dark:text-gray-400">Sábados: 8:00 AM - 12:00 PM</p>
-                    <p className="text-gray-600 dark:text-gray-400">Domingos: Cerrado</p>
+                    <h3 className="font-semibold text-gray-900 mb-1">Horarios de Atención</h3>
+                    <p className="text-gray-600">Lunes a Viernes: 8:00 AM - 6:00 PM</p>
+                    <p className="text-gray-600">Sábados: 8:00 AM - 12:00 PM</p>
+                    <p className="text-gray-600">Domingos: Cerrado</p>
                   </div>
                 </div>
               </div>
 
               {/* Social Media */}
               <div className="mt-8">
-                <h3 className="font-semibold text-gray-900 dark:text-white mb-4">Síguenos en Redes Sociales</h3>
+                <h3 className="font-semibold text-gray-900 mb-4">Síguenos en Redes Sociales</h3>
                 <div className="flex gap-4">
                   <a
                     href="https://www.facebook.com/share/1CspHkjwKF/?mibextid=wwXIfr"
@@ -337,15 +337,15 @@ export default function ContactoPage() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
             >
-              <Card className="bg-white dark:bg-gray-800 border-gray-200 dark:border-gray-700">
+              <Card className="bg-white border-gray-200">
                 <CardContent className="p-8">
-                  <h2 className="text-xl sm:text-2xl font-bold text-gray-900 dark:text-white mb-6">Cotiza con nosotros</h2>
+                  <h2 className="text-xl sm:text-2xl font-bold text-gray-900 mb-6">Cotiza con nosotros</h2>
                   <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                       <div>
                         <label
                           htmlFor="firstName"
-                          className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2"
+                          className="block text-sm font-medium text-gray-700 mb-2"
                         >
                           Nombre *
                         </label>
@@ -354,7 +354,7 @@ export default function ContactoPage() {
                           id="firstName"
                           {...register("firstName")}
                           disabled={isSubmitting}
-                          className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-white dark:bg-gray-700 text-gray-900 dark:text-white disabled:opacity-50 disabled:cursor-not-allowed"
+                          className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-white text-gray-900 disabled:opacity-50 disabled:cursor-not-allowed"
                           placeholder="Tu nombre"
                         />
                         {errors.firstName && (
@@ -364,7 +364,7 @@ export default function ContactoPage() {
                       <div>
                         <label
                           htmlFor="lastName"
-                          className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2"
+                          className="block text-sm font-medium text-gray-700 mb-2"
                         >
                           Apellido *
                         </label>
@@ -373,7 +373,7 @@ export default function ContactoPage() {
                           id="lastName"
                           {...register("lastName")}
                           disabled={isSubmitting}
-                          className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-white dark:bg-gray-700 text-gray-900 dark:text-white disabled:opacity-50 disabled:cursor-not-allowed"
+                          className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-white text-gray-900 disabled:opacity-50 disabled:cursor-not-allowed"
                           placeholder="Tu apellido"
                         />
                         {errors.lastName && <p className="mt-1 text-sm text-red-600">{errors.lastName.message}</p>}
@@ -381,7 +381,7 @@ export default function ContactoPage() {
                     </div>
 
                     <div>
-                      <label htmlFor="email" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+                      <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
                         Correo Electrónico *
                       </label>
                       <input
@@ -389,14 +389,14 @@ export default function ContactoPage() {
                         id="email"
                         {...register("email")}
                         disabled={isSubmitting}
-                        className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-white dark:bg-gray-700 text-gray-900 dark:text-white disabled:opacity-50 disabled:cursor-not-allowed"
+                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-white text-gray-900 disabled:opacity-50 disabled:cursor-not-allowed"
                         placeholder="tu@email.com"
                       />
                       {errors.email && <p className="mt-1 text-sm text-red-600">{errors.email.message}</p>}
                     </div>
 
                     <div>
-                      <label htmlFor="phone" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+                      <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-2">
                         Teléfono
                       </label>
                       <input
@@ -404,21 +404,21 @@ export default function ContactoPage() {
                         id="phone"
                         {...register("phone")}
                         disabled={isSubmitting}
-                        className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-white dark:bg-gray-700 text-gray-900 dark:text-white disabled:opacity-50 disabled:cursor-not-allowed"
+                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-white text-gray-900 disabled:opacity-50 disabled:cursor-not-allowed"
                         placeholder="300 123 4567"
                       />
                       {errors.phone && <p className="mt-1 text-sm text-red-600">{errors.phone.message}</p>}
                     </div>
 
                     <div>
-                      <label htmlFor="service" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+                      <label htmlFor="service" className="block text-sm font-medium text-gray-700 mb-2">
                         Servicio de Interés
                       </label>
                       <select
                         id="service"
                         {...register("service")}
                         disabled={isSubmitting}
-                        className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-white dark:bg-gray-700 text-gray-900 dark:text-white disabled:opacity-50 disabled:cursor-not-allowed"
+                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-white text-gray-900 disabled:opacity-50 disabled:cursor-not-allowed"
                       >
                         <option value="">Selecciona un servicio</option>
                         <option value="avaluo-comercial">Avalúo Comercial</option>
@@ -433,7 +433,7 @@ export default function ContactoPage() {
                     </div>
 
                     <div>
-                      <label htmlFor="message" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+                      <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
                         Mensaje *
                       </label>
                       <textarea
@@ -441,7 +441,7 @@ export default function ContactoPage() {
                         {...register("message")}
                         disabled={isSubmitting}
                         rows={5}
-                        className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-white dark:bg-gray-700 text-gray-900 dark:text-white disabled:opacity-50 disabled:cursor-not-allowed"
+                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-white text-gray-900 disabled:opacity-50 disabled:cursor-not-allowed"
                         placeholder="Describe tu proyecto o consulta..."
                       />
                       {errors.message && <p className="mt-1 text-sm text-red-600">{errors.message.message}</p>}
@@ -467,7 +467,7 @@ export default function ContactoPage() {
                         disabled={isSubmitting}
                         className="mt-1"
                       />
-                      <label htmlFor="privacy" className="text-sm text-gray-600 dark:text-gray-400">
+                      <label htmlFor="privacy" className="text-sm text-gray-600">
                         Acepto el tratamiento de mis datos personales de acuerdo con la política de privacidad *
                       </label>
                     </div>
@@ -496,7 +496,7 @@ export default function ContactoPage() {
       </section>
 
       {/* Map Section */}
-      <section className="py-20 bg-gray-50 dark:bg-gray-800">
+      <section className="py-20 bg-gray-50">
         <div className="container mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 50 }}
@@ -504,8 +504,8 @@ export default function ContactoPage() {
             transition={{ duration: 0.8 }}
             className="text-center mb-12"
           >
-            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 dark:text-white mb-6 px-4">Nuestra Ubicación</h2>
-            <p className="text-lg sm:text-xl text-gray-600 dark:text-gray-400 px-4">Visítanos en nuestra oficina principal en Medellín</p>
+            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-6 px-4">Nuestra Ubicación</h2>
+            <p className="text-lg sm:text-xl text-gray-600 px-4">Visítanos en nuestra oficina principal en Medellín</p>
           </motion.div>
 
           <div className="rounded-lg overflow-hidden shadow-lg">
@@ -533,8 +533,8 @@ export default function ContactoPage() {
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
           >
-            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 dark:text-white mb-6 px-4">Cobertura Nacional</h2>
-            <p className="text-lg sm:text-xl text-gray-600 dark:text-gray-400 max-w-3xl mx-auto px-4">
+            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-6 px-4">Cobertura Nacional</h2>
+            <p className="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto px-4">
               Atendemos proyectos en todo el territorio colombiano con el mismo nivel de calidad y profesionalismo
             </p>
           </motion.div>
@@ -546,10 +546,10 @@ export default function ContactoPage() {
               transition={{ duration: 0.8 }}
               className="w-full max-w-md"
             >
-              <Card className="bg-white dark:bg-gray-700 border-gray-200 dark:border-gray-600">
+              <Card className="bg-white border-gray-200">
                 <CardContent className="p-8 text-center">
-                  <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-6">Región Andina</h3>
-                  <ul className="space-y-3 text-lg text-gray-600 dark:text-gray-400">
+                  <h3 className="text-2xl font-bold text-gray-900 mb-6">Región Andina</h3>
+                  <ul className="space-y-3 text-lg text-gray-600">
                     <li>Bogotá</li>
                     <li>Medellín</li>
                     <li>Cali</li>

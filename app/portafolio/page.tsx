@@ -138,7 +138,7 @@ export default function PortafolioPage() {
     selectedCategory === "Todos" ? projects : projects.filter((project) => project.category === selectedCategory)
 
   return (
-    <div className="min-h-screen bg-white dark:bg-gray-900">
+    <div className="min-h-screen bg-white">
       {/* Hero Section */}
       <section className="relative py-20 bg-gradient-to-br from-purple-900 via-blue-900 to-indigo-800 text-white overflow-hidden">
         {/* Portfolio Items Floating */}
@@ -269,7 +269,7 @@ export default function PortafolioPage() {
       </section>
 
       {/* Filter Section */}
-      <section className="py-12 bg-gray-50 dark:bg-gray-800">
+      <section className="py-12 bg-gray-50">
         <div className="container mx-auto px-4">
           <div className="flex flex-wrap justify-center gap-4">
             {categories.map((category) => (
@@ -298,7 +298,7 @@ export default function PortafolioPage() {
                 transition={{ duration: 0.8, delay: index * 0.1 }}
               >
                 <Card
-                  className="h-full hover:shadow-lg dark:hover:shadow-2xl transition-shadow duration-300 cursor-pointer bg-white dark:bg-gray-800 border-gray-200 dark:border-gray-700"
+                  className="h-full hover:shadow-lg:shadow-2xl transition-shadow duration-300 cursor-pointer bg-white border-gray-200"
                   onClick={() => setSelectedProject(project.id)}
                 >
                   <CardContent className="p-0">
@@ -321,11 +321,11 @@ export default function PortafolioPage() {
                     </div>
 
                     <div className="p-6">
-                      <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-2">{project.title}</h3>
-                      <p className="text-blue-600 dark:text-blue-400 font-semibold mb-3">{project.type}</p>
-                      <p className="text-gray-600 dark:text-gray-400 mb-4 line-clamp-2">{project.description}</p>
+                      <h3 className="text-xl font-bold text-gray-900 mb-2">{project.title}</h3>
+                      <p className="text-blue-600 font-semibold mb-3">{project.type}</p>
+                      <p className="text-gray-600 mb-4 line-clamp-2">{project.description}</p>
 
-                      <div className="space-y-2 text-sm text-gray-500 dark:text-gray-400">
+                      <div className="space-y-2 text-sm text-gray-500">
                         <div className="flex items-center space-x-2">
                           <MapPin className="h-4 w-4" />
                           <span>{project.location}</span>
@@ -341,7 +341,7 @@ export default function PortafolioPage() {
                       </div>
 
                       <div className="mt-4 pt-4 border-t">
-                        <p className="text-lg font-bold text-blue-600 dark:text-blue-400">{project.value}</p>
+                        <p className="text-lg font-bold text-blue-600">{project.value}</p>
                       </div>
                     </div>
                   </CardContent>
@@ -358,7 +358,7 @@ export default function PortafolioPage() {
           <motion.div
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
-            className="bg-white dark:bg-gray-800 rounded-lg max-w-4xl w-full max-h-[90vh] overflow-y-auto border border-gray-200 dark:border-gray-700"
+            className="bg-white rounded-lg max-w-4xl w-full max-h-[90vh] overflow-y-auto border border-gray-200"
           >
             {(() => {
               const project = projects.find((p) => p.id === selectedProject)!
@@ -381,8 +381,8 @@ export default function PortafolioPage() {
                   <div className="p-8">
                     <div className="flex items-center justify-between mb-6">
                       <div>
-                        <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-2">{project.title}</h2>
-                        <p className="text-blue-600 dark:text-blue-400 font-semibold text-lg">{project.type}</p>
+                        <h2 className="text-3xl font-bold text-gray-900 mb-2">{project.title}</h2>
+                        <p className="text-blue-600 font-semibold text-lg">{project.type}</p>
                       </div>
                       <div className="bg-blue-100 p-3 rounded-full">
                         <project.icon className="h-8 w-8 text-blue-600" />
@@ -434,7 +434,7 @@ export default function PortafolioPage() {
       )}
 
       {/* Stats Section */}
-      <section className="py-20 bg-gray-50 dark:bg-gray-800">
+      <section className="py-20 bg-gray-50">
         <div className="container mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 50 }}

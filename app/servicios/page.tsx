@@ -230,7 +230,7 @@ const topografiaServices = [
 
 export default function ServiciosPage() {
   return (
-    <div className="min-h-screen bg-white dark:bg-gray-900">
+    <div className="min-h-screen bg-white">
       {/* Hero Section */}
       <section className="relative py-20 bg-gradient-to-br from-blue-900 via-blue-800 to-slate-900 text-white overflow-hidden">
         <div className="absolute inset-0 opacity-10">

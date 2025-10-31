@@ -7,7 +7,7 @@ import { Card, CardContent } from "@/components/ui/card"
 
 export default function QuienesSomosPage() {
   return (
-    <div className="min-h-screen bg-white dark:bg-gray-900">
+    <div className="min-h-screen bg-white">
       {/* Hero Section */}
       <section className="relative py-20 bg-gradient-to-br from-blue-900 via-purple-900 to-blue-800 text-white overflow-hidden">
         {/* Animated Background Elements */}
@@ -113,10 +113,10 @@ export default function QuienesSomosPage() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
             >
-              <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 dark:text-white mb-6">Nuestra Historia: Pasión, Experiencia y Profesionalismo</h2>
+              <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-6">Nuestra Historia: Pasión, Experiencia y Profesionalismo</h2>
 
               <h3 className="text-lg sm:text-xl font-bold text-blue-600 mb-3">Los Inicios de la Experiencia (Año 2005)</h3>
-              <p className="text-gray-600 dark:text-gray-400 mb-6 text-base sm:text-lg leading-relaxed">
+              <p className="text-gray-600 mb-6 text-base sm:text-lg leading-relaxed">
                 En el año 2005, nuestro socio fundador, el Dr. Abel Adrián Escobar Escudero, egresado de Derecho,
                 inició su carrera como auxiliar de justicia. Durante 10 años, se desempeñó como avaluador certificado
                 por el Registro Abierto de Avaluadores (RAA), forjando desde entonces una trayectoria especializada
@@ -124,7 +124,7 @@ export default function QuienesSomosPage() {
               </p>
 
               <h3 className="text-lg sm:text-xl font-bold text-blue-600 mb-3">La Unión de Visiones (2018 - 2021)</h3>
-              <p className="text-gray-600 dark:text-gray-400 mb-6 text-base sm:text-lg leading-relaxed">
+              <p className="text-gray-600 mb-6 text-base sm:text-lg leading-relaxed">
                 En 2018, el Dr. Escobar une su camino profesional con el Dr. Andrés Camilo García Hernández,
                 abogado egresado en 2019. Esta asociación, que se consolidó formalmente como sociedad en 2021,
                 combinó años de experiencia práctica con una perspectiva legal renovada, sentando las bases para
@@ -132,7 +132,7 @@ export default function QuienesSomosPage() {
               </p>
 
               <h3 className="text-lg sm:text-xl font-bold text-blue-600 mb-3">El Nacimiento de Dictaminemos (2023)</h3>
-              <p className="text-gray-600 dark:text-gray-400 mb-6 text-base sm:text-lg leading-relaxed">
+              <p className="text-gray-600 mb-6 text-base sm:text-lg leading-relaxed">
                 Con la formalización del sector a través de la Ley del Avaluador (Ley 1673), los socios vieron la
                 clara necesidad de crear una firma que no solo cumpliera con la nueva normativa, sino que elevara
                 el estándar de calidad y confianza en el mercado. Así, en 2023, nace Dictaminemos, una empresa
@@ -140,7 +140,7 @@ export default function QuienesSomosPage() {
               </p>
 
               <h3 className="text-lg sm:text-xl font-bold text-blue-600 mb-3">Nuestro Presente (2025)</h3>
-              <p className="text-gray-600 dark:text-gray-400 text-base sm:text-lg leading-relaxed">
+              <p className="text-gray-600 text-base sm:text-lg leading-relaxed">
                 Hoy, en Dictaminemos sumamos una experiencia combinada de más de 20 años, ofreciendo servicios
                 altamente especializados en dictámenes periciales y avalúos. Nuestro origen, basado en el conocimiento
                 legal y la especialización técnica, es la garantía de seguridad y precisión que ofrecemos a cada uno
@@ -154,7 +154,7 @@ export default function QuienesSomosPage() {
               transition={{ duration: 0.8 }}
               className="relative"
             >
-              <div className="bg-gradient-to-br from-blue-50 to-blue-100 dark:from-blue-900/20 dark:to-blue-800/20 p-8 rounded-lg border border-gray-200 dark:border-gray-700">
+              <div className="bg-gradient-to-br from-blue-50 to-blue-100 p-8 rounded-lg border border-gray-200">
                 <div className="grid grid-cols-2 gap-6">
                   <div className="text-center">
                     <div className="text-2xl sm:text-3xl font-bold text-blue-600 mb-2">2005</div>
@@ -180,7 +180,7 @@ export default function QuienesSomosPage() {
       </section>
 
       {/* Misión, Visión, Valores */}
-      <section className="py-20 bg-gray-50 dark:bg-gray-800">
+      <section className="py-20 bg-gray-50">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
             <motion.div
@@ -188,13 +188,13 @@ export default function QuienesSomosPage() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
             >
-              <Card className="h-full bg-white dark:bg-gray-700 border-gray-200 dark:border-gray-600">
+              <Card className="h-full bg-white border-gray-200">
                 <CardContent className="p-8 text-center">
-                  <div className="flex items-center justify-center w-16 h-16 bg-blue-100 dark:bg-blue-900/30 rounded-lg mb-6 mx-auto">
-                    <Target className="h-8 w-8 text-blue-600 dark:text-blue-400" />
+                  <div className="flex items-center justify-center w-16 h-16 bg-blue-100 rounded-lg mb-6 mx-auto">
+                    <Target className="h-8 w-8 text-blue-600" />
                   </div>
-                  <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">Misión</h3>
-                  <p className="text-gray-600 dark:text-gray-300 leading-relaxed">
+                  <h3 className="text-2xl font-bold text-gray-900 mb-4">Misión</h3>
+                  <p className="text-gray-600 leading-relaxed">
                     En Dictaminemos, ofrecemos servicios de avalúos, dictámenes y topografía con precisión, ética y
                     profesionalismo. Nos comprometemos a brindar información confiable y oportuna que respalde
                     decisiones seguras para particulares, empresas y entidades públicas, promoviendo la transparencia
@@ -209,13 +209,13 @@ export default function QuienesSomosPage() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
             >
-              <Card className="h-full bg-white dark:bg-gray-700 border-gray-200 dark:border-gray-600">
+              <Card className="h-full bg-white border-gray-200">
                 <CardContent className="p-8 text-center">
-                  <div className="flex items-center justify-center w-16 h-16 bg-green-100 dark:bg-green-900/30 rounded-lg mb-6 mx-auto">
-                    <Eye className="h-8 w-8 text-green-600 dark:text-green-400" />
+                  <div className="flex items-center justify-center w-16 h-16 bg-green-100 rounded-lg mb-6 mx-auto">
+                    <Eye className="h-8 w-8 text-green-600" />
                   </div>
-                  <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">Visión</h3>
-                  <p className="text-gray-600 dark:text-gray-300 leading-relaxed">
+                  <h3 className="text-2xl font-bold text-gray-900 mb-4">Visión</h3>
+                  <p className="text-gray-600 leading-relaxed">
                     Ser la primera opción en avalúos y dictámenes, consolidándonos como una empresa referente gracias
                     a nuestro rigor técnico, imparcialidad y cumplimiento normativo. Buscamos brindar a nuestros
                     clientes confianza, agilidad y un servicio cercano que les asegure decisiones patrimoniales seguras
@@ -230,40 +230,40 @@ export default function QuienesSomosPage() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.4 }}
             >
-              <Card className="h-full bg-white dark:bg-gray-700 border-gray-200 dark:border-gray-600">
+              <Card className="h-full bg-white border-gray-200">
                 <CardContent className="p-8 text-center">
-                  <div className="flex items-center justify-center w-16 h-16 bg-purple-100 dark:bg-purple-900/30 rounded-lg mb-6 mx-auto">
-                    <Award className="h-8 w-8 text-purple-600 dark:text-purple-400" />
+                  <div className="flex items-center justify-center w-16 h-16 bg-purple-100 rounded-lg mb-6 mx-auto">
+                    <Award className="h-8 w-8 text-purple-600" />
                   </div>
-                  <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">Valores</h3>
+                  <h3 className="text-2xl font-bold text-gray-900 mb-4">Valores</h3>
                   <div className="text-left space-y-2">
                     <div className="flex items-center space-x-2">
                       <CheckCircle className="h-4 w-4 text-green-500" />
-                      <span className="text-gray-600 dark:text-gray-300">Confianza</span>
+                      <span className="text-gray-600">Confianza</span>
                     </div>
                     <div className="flex items-center space-x-2">
                       <CheckCircle className="h-4 w-4 text-green-500" />
-                      <span className="text-gray-600 dark:text-gray-300">Precisión</span>
+                      <span className="text-gray-600">Precisión</span>
                     </div>
                     <div className="flex items-center space-x-2">
                       <CheckCircle className="h-4 w-4 text-green-500" />
-                      <span className="text-gray-600 dark:text-gray-300">Transparencia</span>
+                      <span className="text-gray-600">Transparencia</span>
                     </div>
                     <div className="flex items-center space-x-2">
                       <CheckCircle className="h-4 w-4 text-green-500" />
-                      <span className="text-gray-600 dark:text-gray-300">Compromiso</span>
+                      <span className="text-gray-600">Compromiso</span>
                     </div>
                     <div className="flex items-center space-x-2">
                       <CheckCircle className="h-4 w-4 text-green-500" />
-                      <span className="text-gray-600 dark:text-gray-300">Agilidad</span>
+                      <span className="text-gray-600">Agilidad</span>
                     </div>
                     <div className="flex items-center space-x-2">
                       <CheckCircle className="h-4 w-4 text-green-500" />
-                      <span className="text-gray-600 dark:text-gray-300">Profesionalismo</span>
+                      <span className="text-gray-600">Profesionalismo</span>
                     </div>
                     <div className="flex items-center space-x-2">
                       <CheckCircle className="h-4 w-4 text-green-500" />
-                      <span className="text-gray-600 dark:text-gray-300">Innovación</span>
+                      <span className="text-gray-600">Innovación</span>
                     </div>
                   </div>
                 </CardContent>
@@ -282,8 +282,8 @@ export default function QuienesSomosPage() {
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
           >
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-6 px-4">Nuestro Equipo</h2>
-            <p className="text-lg sm:text-xl text-gray-600 dark:text-gray-400 max-w-3xl mx-auto px-4">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-6 px-4">Nuestro Equipo</h2>
+            <p className="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto px-4">
               Contamos con un equipo multidisciplinario de profesionales altamente calificados y certificados
             </p>
           </motion.div>
@@ -332,7 +332,7 @@ export default function QuienesSomosPage() {
       </section>
 
       {/* Certificaciones */}
-      <section className="py-20 bg-gray-50 dark:bg-gray-800">
+      <section className="py-20 bg-gray-50">
         <div className="container mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 50 }}
@@ -340,10 +340,10 @@ export default function QuienesSomosPage() {
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
           >
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-6 px-4">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-6 px-4">
               Certificaciones y Reconocimientos
             </h2>
-            <p className="text-lg sm:text-xl text-gray-600 dark:text-gray-400 max-w-3xl mx-auto px-4">
+            <p className="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto px-4">
               Nuestros profesionales cuentan con las certificaciones más importantes del sector
             </p>
           </motion.div>
@@ -353,13 +353,13 @@ export default function QuienesSomosPage() {
               initial={{ opacity: 0, scale: 0.8 }}
               whileInView={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.5 }}
-              className="bg-white dark:bg-gray-700 p-8 rounded-lg shadow-md hover:shadow-xl dark:hover:shadow-2xl transition-shadow text-center border-2 border-blue-200 dark:border-blue-600 max-w-md"
+              className="bg-white p-8 rounded-lg shadow-md hover:shadow-xl:shadow-2xl transition-shadow text-center border-2 border-blue-200 max-w-md"
             >
               <Award className="h-16 w-16 text-blue-600 mx-auto mb-6" />
-              <h3 className="font-bold text-2xl text-gray-900 dark:text-white mb-4">
+              <h3 className="font-bold text-2xl text-gray-900 mb-4">
                 Registro Abierto de Avaluadores (RAA)
               </h3>
-              <p className="text-gray-600 dark:text-gray-400 leading-relaxed">
+              <p className="text-gray-600 leading-relaxed">
                 Registro oficial que certifica nuestra habilitación como avaluadores profesionales según la Ley 1673 de 2013.
                 Todos nuestros avaluadores están debidamente inscritos y certificados ante el RAA, garantizando la validez
                 legal de nuestros avalúos y dictámenes técnicos.

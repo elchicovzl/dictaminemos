@@ -21,7 +21,7 @@ const blogPosts = [
 
 export default function BlogPage() {
   return (
-    <div className="min-h-screen bg-white dark:bg-gray-900">
+    <div className="min-h-screen bg-white">
       {/* Hero Section */}
       <section className="relative py-20 bg-gradient-to-br from-indigo-900 via-blue-900 to-purple-800 text-white overflow-hidden">
         <div className="absolute inset-0 opacity-10">

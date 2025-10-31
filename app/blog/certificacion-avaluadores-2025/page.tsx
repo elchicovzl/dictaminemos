@@ -8,7 +8,7 @@ import { Card, CardContent } from "@/components/ui/card"
 
 export default function BlogPostPage() {
   return (
-    <div className="min-h-screen bg-white dark:bg-gray-900">
+    <div className="min-h-screen bg-white">
       {/* Hero Section */}
       <section className="relative py-12 bg-gradient-to-br from-blue-900 to-indigo-800 text-white">
         <div className="container mx-auto px-4">

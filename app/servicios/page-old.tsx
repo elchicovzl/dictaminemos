@@ -120,7 +120,7 @@ const services = [
 
 export default function ServiciosPage() {
   return (
-    <div className="min-h-screen bg-white dark:bg-gray-900">
+    <div className="min-h-screen bg-white">
       {/* Hero Section */}
       <section className="relative py-20 bg-gradient-to-br from-green-900 via-blue-900 to-teal-800 text-white overflow-hidden">
         {/* Service Icons Animation */}
@@ -249,36 +249,36 @@ export default function ServiciosPage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
               >
-                <Card className="h-full hover:shadow-lg dark:hover:shadow-2xl transition-shadow duration-300 bg-white dark:bg-gray-800 border-gray-200 dark:border-gray-700">
+                <Card className="h-full hover:shadow-lg:shadow-2xl transition-shadow duration-300 bg-white border-gray-200">
                   <CardContent className="p-8">
                     <div className="flex items-center mb-6">
-                      <div className="flex items-center justify-center w-16 h-16 bg-blue-100 dark:bg-blue-900/30 rounded-lg mr-4">
-                        <service.icon className="h-8 w-8 text-blue-600 dark:text-blue-400" />
+                      <div className="flex items-center justify-center w-16 h-16 bg-blue-100 rounded-lg mr-4">
+                        <service.icon className="h-8 w-8 text-blue-600" />
                       </div>
-                      <h3 className="text-2xl font-bold text-gray-900 dark:text-white">{service.title}</h3>
+                      <h3 className="text-2xl font-bold text-gray-900">{service.title}</h3>
                     </div>
 
-                    <p className="text-gray-600 dark:text-gray-400 mb-6 text-lg">{service.description}</p>
+                    <p className="text-gray-600 mb-6 text-lg">{service.description}</p>
 
                     <div className="mb-6">
-                      <h4 className="text-lg font-semibold text-gray-900 dark:text-white mb-3">Características:</h4>
+                      <h4 className="text-lg font-semibold text-gray-900 mb-3">Características:</h4>
                       <ul className="space-y-2">
                         {service.features.map((feature, featureIndex) => (
                           <li key={featureIndex} className="flex items-center space-x-2">
-                            <CheckCircle className="h-4 w-4 text-green-500 dark:text-green-400 flex-shrink-0" />
-                            <span className="text-gray-600 dark:text-gray-400">{feature}</span>
+                            <CheckCircle className="h-4 w-4 text-green-500 flex-shrink-0" />
+                            <span className="text-gray-600">{feature}</span>
                           </li>
                         ))}
                       </ul>
                     </div>
 
                     <div>
-                      <h4 className="text-lg font-semibold text-gray-900 dark:text-white mb-3">Aplicaciones:</h4>
+                      <h4 className="text-lg font-semibold text-gray-900 mb-3">Aplicaciones:</h4>
                       <div className="flex flex-wrap gap-2">
                         {service.applications.map((app, appIndex) => (
                           <span
                             key={appIndex}
-                            className="px-3 py-1 bg-blue-100 dark:bg-blue-900/30 text-blue-800 dark:text-blue-300 rounded-full text-sm"
+                            className="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm"
                           >
                             {app}
                           </span>
@@ -294,7 +294,7 @@ export default function ServiciosPage() {
       </section>
 
       {/* Process Section */}
-      <section className="py-20 bg-gray-50 dark:bg-gray-800">
+      <section className="py-20 bg-gray-50">
         <div className="container mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 50 }}
@@ -302,8 +302,8 @@ export default function ServiciosPage() {
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-6">Nuestro Proceso</h2>
-            <p className="text-xl text-gray-600 dark:text-gray-400 max-w-3xl mx-auto">
+            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">Nuestro Proceso</h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               Seguimos un proceso estructurado y profesional para garantizar la calidad en cada proyecto
             </p>
           </motion.div>
@@ -338,11 +338,11 @@ export default function ServiciosPage() {
                 transition={{ duration: 0.8, delay: index * 0.2 }}
                 className="text-center"
               >
-                <div className="w-16 h-16 bg-blue-600 dark:bg-blue-500 text-white rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-4">
+                <div className="w-16 h-16 bg-blue-600 text-white rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-4">
                   {step.step}
                 </div>
-                <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-3">{step.title}</h3>
-                <p className="text-gray-600 dark:text-gray-400">{step.description}</p>
+                <h3 className="text-xl font-bold text-gray-900 mb-3">{step.title}</h3>
+                <p className="text-gray-600">{step.description}</p>
               </motion.div>
             ))}
           </div>
