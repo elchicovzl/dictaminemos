@@ -64,26 +64,28 @@ export default function BlogPage() {
                       <div className="md:col-span-1 h-64 md:h-auto bg-gradient-to-br from-blue-500 to-purple-600 flex items-center justify-center">
                         <Shield className="h-24 w-24 text-white opacity-50" />
                       </div>
-                      <div className="md:col-span-2 p-8">
-                        <div className="flex items-center space-x-4 text-sm text-gray-500 mb-3">
-                          <span className="bg-blue-100 text-blue-600 px-3 py-1 rounded-full font-semibold">
+                      <div className="md:col-span-2 p-6 sm:p-8">
+                        <div className="flex flex-col sm:flex-row sm:items-center gap-3 sm:gap-4 text-sm text-gray-500 mb-4">
+                          <span className="bg-blue-100 text-blue-600 px-3 py-1 rounded-full font-semibold inline-block w-fit">
                             {post.category}
                           </span>
-                          <div className="flex items-center space-x-1">
-                            <Calendar className="h-4 w-4" />
-                            <span>{post.date}</span>
-                          </div>
-                          <div className="flex items-center space-x-1">
-                            <User className="h-4 w-4" />
-                            <span>{post.author}</span>
+                          <div className="flex items-center gap-4 flex-wrap">
+                            <div className="flex items-center gap-1">
+                              <Calendar className="h-4 w-4 flex-shrink-0" />
+                              <span className="whitespace-nowrap">{post.date}</span>
+                            </div>
+                            <div className="flex items-center gap-1">
+                              <User className="h-4 w-4 flex-shrink-0" />
+                              <span className="whitespace-nowrap">{post.author}</span>
+                            </div>
                           </div>
                         </div>
 
-                        <h2 className="text-3xl font-bold text-gray-900 mb-4 group-hover:text-blue-600 transition-colors">
+                        <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-4 group-hover:text-blue-600 transition-colors">
                           {post.title}
                         </h2>
 
-                        <p className="text-gray-600 mb-6 text-lg leading-relaxed">
+                        <p className="text-gray-600 mb-6 text-base sm:text-lg leading-relaxed">
                           {post.excerpt}
                         </p>
 

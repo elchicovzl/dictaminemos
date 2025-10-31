@@ -71,7 +71,7 @@ export function TechnologySlider() {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentIndex((prevIndex) => (prevIndex + 1) % technologies.length)
-    }, 3000)
+    }, 2000) // Cambiado de 3000ms a 2000ms (más rápido)
 
     return () => clearInterval(interval)
   }, [])
@@ -101,13 +101,13 @@ export function TechnologySlider() {
                 whileHover={{ scale: 1.05, y: -10 }}
                 transition={{ duration: 0.3 }}
               >
-                <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 w-72 h-56 flex flex-col items-center justify-center text-center border border-white/10 hover:bg-white/10 hover:border-white/20 transition-all duration-300">
-                  <div className="mb-6 transform hover:scale-110 transition-transform duration-300">
-                    {tech.icon({ className: "w-16 h-16" })}
+                <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-6 sm:p-8 w-72 h-56 flex flex-col items-center justify-center text-center border border-white/10 hover:bg-white/10 hover:border-white/20 transition-all duration-300">
+                  <div className="mb-4 sm:mb-6 transform hover:scale-110 transition-transform duration-300">
+                    {tech.icon({ className: "w-14 h-14 sm:w-16 sm:h-16" })}
                   </div>
-                  <h3 className="text-xl font-bold mb-3 text-white">{tech.name}</h3>
-                  <p className="text-sm text-gray-300 mb-4 leading-relaxed">{tech.description}</p>
-                  <span className="text-xs px-4 py-2 rounded-full bg-blue-500/20 text-blue-300 border border-blue-500/30 font-medium">
+                  <h3 className="text-lg sm:text-xl font-bold mb-2 sm:mb-3 text-white px-2">{tech.name}</h3>
+                  <p className="text-xs sm:text-sm text-gray-300 mb-3 sm:mb-4 leading-relaxed px-2">{tech.description}</p>
+                  <span className="text-xs px-3 sm:px-4 py-1.5 sm:py-2 rounded-full bg-blue-500/20 text-blue-300 border border-blue-500/30 font-medium">
                     {tech.category}
                   </span>
                 </div>
@@ -160,7 +160,7 @@ export function TechnologySlider() {
           }
         }
         .animate-scroll {
-          animation: scroll 35s linear infinite;
+          animation: scroll 20s linear infinite;
         }
         .animate-scroll:hover {
           animation-play-state: paused;
