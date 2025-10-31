@@ -213,7 +213,7 @@ export default function BlogPostPage() {
                     En Dictaminemos, todos nuestros avaluadores están certificados
                   </h3>
                   <p className="text-center text-gray-700 mb-6">
-                    Contamos con más de 15 años de experiencia y profesionales certificados bajo las normas vigentes.
+                    Contamos con más de 20 años de experiencia y profesionales certificados bajo las normas vigentes.
                     Tu patrimonio está en manos expertas.
                   </p>
                   <div className="flex justify-center">

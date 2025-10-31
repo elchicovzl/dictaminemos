@@ -55,7 +55,7 @@ export default function HomePage() {
         const progress = currentStep / steps
 
         setCounters({
-          experience: Math.floor(15 * progress),
+          experience: Math.floor(20 * progress),
           appraisals: Math.floor(2500 * progress),
           clients: Math.floor(500 * progress),
         })
@@ -213,7 +213,7 @@ export default function HomePage() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 1.8 }}
             >
-              Especialistas en Derecho, Arquitectura y Tecnología Catastral con más de 15 años de experiencia brindando
+              Especialistas en Derecho, Arquitectura y Tecnología Catastral con más de 20 años de experiencia brindando
               soluciones integrales
             </motion.p>
 
@@ -335,7 +335,7 @@ export default function HomePage() {
               {
                 icon: TrendingUp,
                 title: "Experiencia Comprobada",
-                description: "Más de 15 años en el mercado respaldando nuestros servicios",
+                description: "Más de 20 años en el mercado respaldando nuestros servicios",
               },
               {
                 icon: Clock,

@@ -36,7 +36,7 @@ const faqCategories = [
       },
       {
         question: "¿Con qué frecuencia se recomienda actualizar un avalúo?",
-        answer: "Lo ideal es cada 2 años, o cuando se realicen mejoras o cambios importantes en la propiedad.",
+        answer: "Lo ideal es cada 1 año, o cuando se realicen mejoras o cambios importantes en la propiedad.",
       },
       {
         question: "¿El avalúo es aceptado por bancos e instituciones financieras?",
@@ -92,10 +92,6 @@ const faqCategories = [
         question: "¿Cómo se entrega el informe final del avalúo?",
         answer: "En formato digital (PDF) y, si el cliente lo requiere, en físico con firma y sello de nuestros peritos.",
       },
-      {
-        question: "¿Qué hago si no estoy de acuerdo con el valor determinado en el avalúo?",
-        answer: "Puedes solicitar una revisión con soporte documental adicional. Nuestro compromiso es garantizar transparencia y objetividad.",
-      },
     ]
   },
   {
@@ -134,11 +130,11 @@ const faqCategories = [
     faqs: [
       {
         question: "¿Qué experiencia tiene su empresa en el sector?",
-        answer: "Contamos con más de 15 años de experiencia en avalúos, dictámenes y topografía, respaldados por cientos de clientes satisfechos.",
+        answer: "Contamos con más de 20 años de experiencia en avalúos, dictámenes y topografía, respaldados por cientos de clientes satisfechos.",
       },
       {
         question: "¿Los avalúos los realizan profesionales certificados?",
-        answer: "Sí, todos nuestros peritos cuentan con registro ante el RNA, formación especializada y experiencia comprobada.",
+        answer: "Sí, todos nuestros peritos cuentan con registro ante el RAA, formación especializada y experiencia comprobada.",
       },
       {
         question: "¿Además de avalúos, realizan dictámenes o servicios de topografía?",
@@ -146,7 +142,7 @@ const faqCategories = [
       },
       {
         question: "¿Por qué debería elegir su empresa frente a otras?",
-        answer: "Porque ofrecemos avalúos precisos, decisiones seguras, con atención personalizada, experiencia comprobada de 15+ años y respaldo técnico-legal.",
+        answer: "Porque ofrecemos avalúos precisos, decisiones seguras, con atención personalizada, experiencia comprobada de 20+ años y respaldo técnico-legal.",
       },
     ]
   },

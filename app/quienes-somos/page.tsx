@@ -97,7 +97,7 @@ export default function QuienesSomosPage() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 1.2 }}
             >
-              Una empresa líder en servicios de avalúos, dictámenes técnicos y topografía con más de 15 años de
+              Una empresa líder en servicios de avalúos, dictámenes técnicos y topografía con más de 20 años de
               experiencia
             </motion.p>
           </motion.div>
@@ -115,18 +115,18 @@ export default function QuienesSomosPage() {
             >
               <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 dark:text-white mb-6">Nuestra Historia: Pasión, Experiencia y Profesionalismo</h2>
 
-              <h3 className="text-lg sm:text-xl font-bold text-blue-600 mb-3">Los Inicios de la Experiencia (Año 2000)</h3>
+              <h3 className="text-lg sm:text-xl font-bold text-blue-600 mb-3">Los Inicios de la Experiencia (Año 2005)</h3>
               <p className="text-gray-600 dark:text-gray-400 mb-6 text-base sm:text-lg leading-relaxed">
-                En el año 2000, nuestro socio fundador, el Dr. Abel Adrián Escobar Escudero, egresado de Derecho,
-                inició su carrera como auxiliar de justicia. Durante 5 años, se desempeñó como avaluador certificado
-                por el Registro Nacional de Avaluadores (RNA), forjando desde entonces una trayectoria especializada
+                En el año 2005, nuestro socio fundador, el Dr. Abel Adrián Escobar Escudero, egresado de Derecho,
+                inició su carrera como auxiliar de justicia. Durante 10 años, se desempeñó como avaluador certificado
+                por el Registro Abierto de Avaluadores (RAA), forjando desde entonces una trayectoria especializada
                 y reconocida en el campo de los avalúos.
               </p>
 
-              <h3 className="text-lg sm:text-xl font-bold text-blue-600 mb-3">La Unión de Visiones (2016 - 2021)</h3>
+              <h3 className="text-lg sm:text-xl font-bold text-blue-600 mb-3">La Unión de Visiones (2018 - 2021)</h3>
               <p className="text-gray-600 dark:text-gray-400 mb-6 text-base sm:text-lg leading-relaxed">
-                En 2016, el Dr. Escobar une su camino profesional con el Dr. Andrés Camilo García Hernández,
-                abogado egresado en 2018. Esta asociación, que se consolidó formalmente como sociedad en 2021,
+                En 2018, el Dr. Escobar une su camino profesional con el Dr. Andrés Camilo García Hernández,
+                abogado egresado en 2019. Esta asociación, que se consolidó formalmente como sociedad en 2021,
                 combinó años de experiencia práctica con una perspectiva legal renovada, sentando las bases para
                 un proyecto más ambicioso.
               </p>
@@ -141,7 +141,7 @@ export default function QuienesSomosPage() {
 
               <h3 className="text-lg sm:text-xl font-bold text-blue-600 mb-3">Nuestro Presente (2025)</h3>
               <p className="text-gray-600 dark:text-gray-400 text-base sm:text-lg leading-relaxed">
-                Hoy, en Dictaminemos sumamos una experiencia combinada de más de 15 años, ofreciendo servicios
+                Hoy, en Dictaminemos sumamos una experiencia combinada de más de 20 años, ofreciendo servicios
                 altamente especializados en dictámenes periciales y avalúos. Nuestro origen, basado en el conocimiento
                 legal y la especialización técnica, es la garantía de seguridad y precisión que ofrecemos a cada uno
                 de nuestros clientes.
@@ -157,7 +157,7 @@ export default function QuienesSomosPage() {
               <div className="bg-gradient-to-br from-blue-50 to-blue-100 dark:from-blue-900/20 dark:to-blue-800/20 p-8 rounded-lg border border-gray-200 dark:border-gray-700">
                 <div className="grid grid-cols-2 gap-6">
                   <div className="text-center">
-                    <div className="text-2xl sm:text-3xl font-bold text-blue-600 mb-2">2000</div>
+                    <div className="text-2xl sm:text-3xl font-bold text-blue-600 mb-2">2005</div>
                     <p className="text-sm sm:text-base text-gray-700">Inicio de Trayectoria</p>
                   </div>
                   <div className="text-center">

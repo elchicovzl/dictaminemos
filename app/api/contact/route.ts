@@ -74,8 +74,8 @@ export async function POST(request: NextRequest) {
       const resend = new Resend(process.env.RESEND_API_KEY)
 
       const { data, error } = await resend.emails.send({
-        from: process.env.EMAIL_FROM || "onboarding@resend.dev",
-        to: process.env.EMAIL_TO || "dictaminemos@gmail.com",
+        from: process.env.EMAIL_FROM || "Formulario de Contacto <noreply@dictaminemos.com>",
+        to: process.env.EMAIL_TO || "contacto@dictaminemos.com",
         subject: `Nuevo contacto: ${validatedData.service || "Consulta general"}`,
         replyTo: validatedData.email,
         html: `

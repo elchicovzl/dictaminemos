@@ -18,6 +18,7 @@ const avaluosServices = [
     title: "Avalúo de Inmuebles Urbanos",
     description: "¿Vas a comprar, vender o solicitar un crédito? Determinamos el valor justo de mercado de casas, apartamentos, oficinas, locales comerciales y bodegas.",
     features: [
+      "Análisis del uso del suelo",
       "Análisis de mercado inmobiliario",
       "Evaluación de ubicación y entorno",
       "Inspección detallada del inmueble",
@@ -29,7 +30,6 @@ const avaluosServices = [
     title: "Avalúo de Inmuebles Rurales",
     description: "Maximizamos el valor de tu inversión en el campo. Realizamos avalúos técnicos de fincas, lotes y terrenos productivos.",
     features: [
-      "Análisis de suelos y productividad",
       "Evaluación de cultivos y mejoras",
       "Valoración de fuentes hídricas",
       "Potencial agropecuario"
@@ -42,8 +42,7 @@ const avaluosServices = [
     features: [
       "Evaluación de construcciones nuevas",
       "Valoración de remodelaciones",
-      "Análisis de ampliaciones",
-      "Registro de incremento patrimonial"
+      "Análisis de ampliaciones"
     ],
   },
   {
@@ -96,9 +95,7 @@ const avaluosServices = [
     description: "Ofrecemos avalúos especializados para el sector ganadero y agropecuario. Determinamos el valor de ganado, equinos y otros activos biológicos.",
     features: [
       "Valoración de ganado",
-      "Evaluación de equinos",
-      "Análisis de genética",
-      "Inventarios pecuarios"
+      "Evaluación de equinos"
     ],
   },
   {
@@ -346,7 +343,7 @@ export default function ServiciosPage() {
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                     <div className="flex items-start space-x-3">
                       <CheckCircle className="h-5 w-5 text-green-500 flex-shrink-0 mt-1" />
-                      <span>Peritos registrados como auxiliares de la justicia</span>
+                      <span>Peritos certificados</span>
                     </div>
                     <div className="flex items-start space-x-3">
                       <CheckCircle className="h-5 w-5 text-green-500 flex-shrink-0 mt-1" />
@@ -447,7 +444,7 @@ export default function ServiciosPage() {
             {[
               { step: "01", title: "Inspección Inicial", description: "Visita y reconocimiento completo del inmueble" },
               { step: "02", title: "Levantamiento Topográfico", description: "Medición precisa con tecnología moderna" },
-              { step: "03", title: "Análisis de Suelos", description: "Evaluación de capacidad y potencial (para fincas)" },
+              { step: "03", title: "Análisis de Suelos", description: "Evaluación de capacidad y potencial" },
               { step: "04", title: "Estudio de Mercado", description: "Investigación de precios y tendencias" },
               { step: "05", title: "Valoración Final", description: "Informe técnico detallado y sustentado" },
             ].map((step, index) => (

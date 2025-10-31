@@ -16,7 +16,7 @@ export function Footer() {
               className="h-12 w-auto mb-4 brightness-0 invert"
             />
             <p className="text-sm sm:text-base text-gray-400 mb-4">
-              Especialistas en avalúos, dictámenes y topografía con más de 15 años de experiencia en el sector.
+              Especialistas en avalúos, dictámenes y topografía con más de 20 años de experiencia en el sector.
             </p>
             <div className="flex space-x-4">
               <a

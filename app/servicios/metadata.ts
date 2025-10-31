@@ -2,7 +2,7 @@ import { Metadata } from 'next'
 
 export const metadata: Metadata = {
   title: "Servicios de Avalúos, Dictámenes y Topografía",
-  description: "Servicios profesionales de avalúos comerciales, catastrales, NIIF, dictámenes periciales y topografía con drones en Medellín. Avaluadores certificados RNA con +15 años de experiencia.",
+  description: "Servicios profesionales de avalúos comerciales, catastrales, NIIF, dictámenes periciales y topografía con drones en Medellín. Avaluadores certificados RAA con +20 años de experiencia.",
   keywords: [
     "servicios de avalúos",
     "avalúos comerciales Medellín",

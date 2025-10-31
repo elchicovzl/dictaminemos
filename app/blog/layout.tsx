@@ -9,7 +9,7 @@ export const metadata: Metadata = {
     "certificación avaluadores",
     "normativa avalúos",
     "Ley 1673",
-    "RNA Colombia",
+    "RAA Colombia",
     "artículos inmobiliarios"
   ],
   openGraph: {

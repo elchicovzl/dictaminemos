@@ -17,14 +17,14 @@ export const metadata: Metadata = {
     default: "Dictaminemos - Avalúos, Dictámenes y Topografía en Medellín | Expertos Certificados",
     template: "%s | Dictaminemos"
   },
-  description: "Avalúos comerciales, dictámenes periciales y topografía con drones en Medellín. +15 años de experiencia. Peritos certificados RNA. Servicios de avalúos urbanos, rurales, NIIF y dictámenes técnicos.",
+  description: "Avalúos comerciales, dictámenes periciales y topografía con drones en Medellín. +20 años de experiencia. Peritos certificados RAA. Servicios de avalúos urbanos, rurales, NIIF y dictámenes técnicos.",
   keywords: [
     "avalúos Medellín",
     "avalúos comerciales",
     "avalúos certificados",
     "dictámenes periciales Medellín",
     "topografía con drones",
-    "avaluadores certificados RNA",
+    "avaluadores certificados RAA",
     "avalúo de inmuebles",
     "avalúo catastral",
     "perito avaluador",
@@ -52,7 +52,7 @@ export const metadata: Metadata = {
     url: "https://dictaminemos.com",
     siteName: "Dictaminemos",
     title: "Dictaminemos - Avalúos, Dictámenes y Topografía en Medellín",
-    description: "Avalúos comerciales, dictámenes periciales y topografía con drones en Medellín. +15 años de experiencia. Peritos certificados RNA.",
+    description: "Avalúos comerciales, dictámenes periciales y topografía con drones en Medellín. +20 años de experiencia. Peritos certificados RAA.",
     images: [
       {
         url: "/images/logo.svg",
@@ -65,7 +65,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Dictaminemos - Avalúos, Dictámenes y Topografía en Medellín",
-    description: "Avalúos comerciales, dictámenes periciales y topografía con drones en Medellín. +15 años de experiencia.",
+    description: "Avalúos comerciales, dictámenes periciales y topografía con drones en Medellín. +20 años de experiencia.",
     images: ["/images/logo.svg"],
   },
   robots: {
@@ -97,7 +97,7 @@ export default function RootLayout({
     "@type": "ProfessionalService",
     "@id": "https://dictaminemos.com",
     "name": "Dictaminemos",
-    "description": "Avalúos comerciales, dictámenes periciales y topografía con drones en Medellín. +15 años de experiencia.",
+    "description": "Avalúos comerciales, dictámenes periciales y topografía con drones en Medellín. +20 años de experiencia.",
     "url": "https://dictaminemos.com",
     "logo": "https://dictaminemos.com/images/logo.svg",
     "image": "https://dictaminemos.com/images/logo.svg",
