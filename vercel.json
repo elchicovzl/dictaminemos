@@ -1,17 +1,4 @@
 {
-  "redirects": [
-    {
-      "source": "/:path*",
-      "has": [
-        {
-          "type": "host",
-          "value": "www.dictaminemos.com"
-        }
-      ],
-      "destination": "https://dictaminemos.com/:path*",
-      "permanent": true
-    }
-  ],
   "headers": [
     {
       "source": "/:path*",
@@ -19,6 +6,10 @@
         {
           "key": "X-Robots-Tag",
           "value": "index, follow"
+        },
+        {
+          "key": "Access-Control-Allow-Origin",
+          "value": "*"
         }
       ]
     }
