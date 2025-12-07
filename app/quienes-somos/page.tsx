@@ -4,8 +4,36 @@ import { motion } from "framer-motion"
 import { Award, CheckCircle, Eye, Target, Users, Zap } from "lucide-react"
 
 import { Card, CardContent } from "@/components/ui/card"
+import { Timeline } from "@/components/timeline"
 
 export default function QuienesSomosPage() {
+  const historyItems = [
+    {
+      year: "2005",
+      title: "Los Inicios de la Experiencia",
+      description:
+        "En el año 2005, nuestro socio fundador, el Dr. Abel Adrián Escobar Escudero, egresado de Derecho, inició su carrera como auxiliar de justicia. Durante 10 años, se desempeñó como avaluador certificado por el Registro Abierto de Avaluadores (RAA), forjando desde entonces una trayectoria especializada y reconocida en el campo de los avalúos.",
+    },
+    {
+      year: "2018 - 2021",
+      title: "La Unión de Visiones",
+      description:
+        "En 2018, el Dr. Escobar une su camino profesional con el Dr. Andrés Camilo García Hernández, abogado egresado en 2019. Esta asociación, que se consolidó formalmente como sociedad en 2021, combinó años de experiencia práctica con una perspectiva legal renovada, sentando las bases para un proyecto más ambicioso.",
+    },
+    {
+      year: "2023",
+      title: "El Nacimiento de Dictaminemos",
+      description:
+        "Con la formalización del sector a través de la Ley del Avaluador (Ley 1673), los socios vieron la clara necesidad de crear una firma que no solo cumpliera con la nueva normativa, sino que elevara el estándar de calidad y confianza en el mercado. Así, en 2023, nace Dictaminemos, una empresa creada para responder con rigor técnico y ético a las exigencias del sector inmobiliario y patrimonial.",
+    },
+    {
+      year: "2025",
+      title: "Nuestro Presente",
+      description:
+        "Hoy, en Dictaminemos sumamos una experiencia combinada de más de 20 años, ofreciendo servicios altamente especializados en dictámenes periciales y avalúos. Nuestro origen, basado en el conocimiento legal y la especialización técnica, es la garantía de seguridad y precisión que ofrecemos a cada uno de nuestros clientes.",
+    },
+  ]
+
   return (
     <div className="min-h-screen bg-white">
       {/* Hero Section */}
@@ -106,75 +134,48 @@ export default function QuienesSomosPage() {
       {/* Historia */}
       <section className="py-20">
         <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <motion.div
-              initial={{ opacity: 0, y: 50 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-            >
-              <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-6">Nuestra Historia: Pasión, Experiencia y Profesionalismo</h2>
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-6">
+              Nuestra Historia: Pasión, Experiencia y Profesionalismo
+            </h2>
+          </motion.div>
 
-              <h3 className="text-lg sm:text-xl font-bold text-blue-600 mb-3">Los Inicios de la Experiencia (Año 2005)</h3>
-              <p className="text-gray-600 mb-6 text-base sm:text-lg leading-relaxed">
-                En el año 2005, nuestro socio fundador, el Dr. Abel Adrián Escobar Escudero, egresado de Derecho,
-                inició su carrera como auxiliar de justicia. Durante 10 años, se desempeñó como avaluador certificado
-                por el Registro Abierto de Avaluadores (RAA), forjando desde entonces una trayectoria especializada
-                y reconocida en el campo de los avalúos.
-              </p>
+          {/* Timeline */}
+          <Timeline items={historyItems} />
 
-              <h3 className="text-lg sm:text-xl font-bold text-blue-600 mb-3">La Unión de Visiones (2018 - 2021)</h3>
-              <p className="text-gray-600 mb-6 text-base sm:text-lg leading-relaxed">
-                En 2018, el Dr. Escobar une su camino profesional con el Dr. Andrés Camilo García Hernández,
-                abogado egresado en 2019. Esta asociación, que se consolidó formalmente como sociedad en 2021,
-                combinó años de experiencia práctica con una perspectiva legal renovada, sentando las bases para
-                un proyecto más ambicioso.
-              </p>
-
-              <h3 className="text-lg sm:text-xl font-bold text-blue-600 mb-3">El Nacimiento de Dictaminemos (2023)</h3>
-              <p className="text-gray-600 mb-6 text-base sm:text-lg leading-relaxed">
-                Con la formalización del sector a través de la Ley del Avaluador (Ley 1673), los socios vieron la
-                clara necesidad de crear una firma que no solo cumpliera con la nueva normativa, sino que elevara
-                el estándar de calidad y confianza en el mercado. Así, en 2023, nace Dictaminemos, una empresa
-                creada para responder con rigor técnico y ético a las exigencias del sector inmobiliario y patrimonial.
-              </p>
-
-              <h3 className="text-lg sm:text-xl font-bold text-blue-600 mb-3">Nuestro Presente (2025)</h3>
-              <p className="text-gray-600 text-base sm:text-lg leading-relaxed">
-                Hoy, en Dictaminemos sumamos una experiencia combinada de más de 20 años, ofreciendo servicios
-                altamente especializados en dictámenes periciales y avalúos. Nuestro origen, basado en el conocimiento
-                legal y la especialización técnica, es la garantía de seguridad y precisión que ofrecemos a cada uno
-                de nuestros clientes.
-              </p>
-            </motion.div>
-
-            <motion.div
-              initial={{ opacity: 0, y: 50 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              className="relative"
-            >
-              <div className="bg-gradient-to-br from-blue-50 to-blue-100 p-8 rounded-lg border border-gray-200">
-                <div className="grid grid-cols-2 gap-6">
-                  <div className="text-center">
-                    <div className="text-2xl sm:text-3xl font-bold text-blue-600 mb-2">2005</div>
-                    <p className="text-sm sm:text-base text-gray-700">Inicio de Trayectoria</p>
-                  </div>
-                  <div className="text-center">
-                    <div className="text-2xl sm:text-3xl font-bold text-blue-600 mb-2">2023</div>
-                    <p className="text-sm sm:text-base text-gray-700">Fundación Dictaminemos</p>
-                  </div>
-                  <div className="text-center">
-                    <div className="text-2xl sm:text-3xl font-bold text-blue-600 mb-2">2500+</div>
-                    <p className="text-sm sm:text-base text-gray-700">Avalúos Realizados</p>
-                  </div>
-                  <div className="text-center">
-                    <div className="text-2xl sm:text-3xl font-bold text-blue-600 mb-2">500+</div>
-                    <p className="text-sm sm:text-base text-gray-700">Clientes Satisfechos</p>
-                  </div>
+          {/* Stats */}
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="mt-20 relative"
+          >
+            <div className="bg-gradient-to-br from-blue-50 to-blue-100 p-8 rounded-2xl border border-blue-200 max-w-5xl mx-auto shadow-sm">
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+                <div className="text-center">
+                  <div className="text-3xl sm:text-4xl font-bold text-blue-600 mb-2">2005</div>
+                  <p className="text-sm sm:text-base text-gray-700 font-medium">Inicio de Trayectoria</p>
+                </div>
+                <div className="text-center">
+                  <div className="text-3xl sm:text-4xl font-bold text-blue-600 mb-2">2023</div>
+                  <p className="text-sm sm:text-base text-gray-700 font-medium">Fundación Dictaminemos</p>
+                </div>
+                <div className="text-center">
+                  <div className="text-3xl sm:text-4xl font-bold text-blue-600 mb-2">2500+</div>
+                  <p className="text-sm sm:text-base text-gray-700 font-medium">Avalúos Realizados</p>
+                </div>
+                <div className="text-center">
+                  <div className="text-3xl sm:text-4xl font-bold text-blue-600 mb-2">500+</div>
+                  <p className="text-sm sm:text-base text-gray-700 font-medium">Clientes Satisfechos</p>
                 </div>
               </div>
-            </motion.div>
-          </div>
+            </div>
+          </motion.div>
         </div>
       </section>
 

@@ -168,11 +168,31 @@ export function FAQSection() {
 
         <div className="max-w-5xl mx-auto">
           <Tabs defaultValue="avaluos" className="w-full">
-            <TabsList className="grid w-full max-w-3xl mx-auto grid-cols-2 sm:grid-cols-4 mb-12 h-auto gap-2">
-              <TabsTrigger value="avaluos" className="text-sm sm:text-base py-2 sm:py-3">Avalúos</TabsTrigger>
-              <TabsTrigger value="proceso" className="text-sm sm:text-base py-2 sm:py-3">Proceso</TabsTrigger>
-              <TabsTrigger value="costos" className="text-sm sm:text-base py-2 sm:py-3">Costos</TabsTrigger>
-              <TabsTrigger value="empresa" className="text-sm sm:text-base py-2 sm:py-3">Empresa</TabsTrigger>
+            <TabsList className="flex flex-wrap justify-center w-full max-w-4xl mx-auto mb-12 h-auto gap-3 bg-transparent p-0">
+              <TabsTrigger
+                value="avaluos"
+                className="text-sm sm:text-base px-6 py-3 rounded-full border border-gray-200 bg-white data-[state=active]:bg-blue-600 data-[state=active]:text-white data-[state=active]:border-blue-600 shadow-sm hover:border-blue-300 transition-all duration-300 min-w-[120px]"
+              >
+                Avalúos
+              </TabsTrigger>
+              <TabsTrigger
+                value="proceso"
+                className="text-sm sm:text-base px-6 py-3 rounded-full border border-gray-200 bg-white data-[state=active]:bg-blue-600 data-[state=active]:text-white data-[state=active]:border-blue-600 shadow-sm hover:border-blue-300 transition-all duration-300 min-w-[120px]"
+              >
+                Proceso
+              </TabsTrigger>
+              <TabsTrigger
+                value="costos"
+                className="text-sm sm:text-base px-6 py-3 rounded-full border border-gray-200 bg-white data-[state=active]:bg-blue-600 data-[state=active]:text-white data-[state=active]:border-blue-600 shadow-sm hover:border-blue-300 transition-all duration-300 min-w-[120px]"
+              >
+                Costos
+              </TabsTrigger>
+              <TabsTrigger
+                value="empresa"
+                className="text-sm sm:text-base px-6 py-3 rounded-full border border-gray-200 bg-white data-[state=active]:bg-blue-600 data-[state=active]:text-white data-[state=active]:border-blue-600 shadow-sm hover:border-blue-300 transition-all duration-300 min-w-[120px]"
+              >
+                Empresa
+              </TabsTrigger>
             </TabsList>
 
             {faqCategories.map((category) => (
