@@ -56,8 +56,8 @@ export default function HomePage() {
 
         setCounters({
           experience: Math.floor(20 * progress),
-          appraisals: Math.floor(2500 * progress),
-          clients: Math.floor(500 * progress),
+          appraisals: Math.floor(1400 * progress),
+          clients: Math.floor(1200 * progress),
         })
 
         if (currentStep >= steps) {

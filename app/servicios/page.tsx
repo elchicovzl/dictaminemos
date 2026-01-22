@@ -172,7 +172,8 @@ const dictamenesServices = [
     items: [
       "Procesos Reivindicatorios",
       "Pertenencia Adquisitiva (Usucapión)",
-      "Deslinde y Amojonamiento"
+      "Deslinde y Amojonamiento",
+      "Procesos Divisorios"
     ]
   },
   {
@@ -444,7 +445,7 @@ export default function ServiciosPage() {
             {[
               { step: "01", title: "Inspección Inicial", description: "Visita y reconocimiento completo del inmueble" },
               { step: "02", title: "Levantamiento Topográfico", description: "Medición precisa con tecnología moderna" },
-              { step: "03", title: "Análisis de Suelos", description: "Evaluación de capacidad y potencial" },
+              { step: "03", title: "Análisis de Usos del Suelo", description: "Evaluación de capacidad y potencial" },
               { step: "04", title: "Estudio de Mercado", description: "Investigación de precios y tendencias" },
               { step: "05", title: "Valoración Final", description: "Informe técnico detallado y sustentado" },
             ].map((step, index) => (

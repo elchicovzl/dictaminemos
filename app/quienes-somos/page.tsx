@@ -166,11 +166,11 @@ export default function QuienesSomosPage() {
                   <p className="text-sm sm:text-base text-gray-700 font-medium">Fundación Dictaminemos</p>
                 </div>
                 <div className="text-center">
-                  <div className="text-3xl sm:text-4xl font-bold text-blue-600 mb-2">2500+</div>
+                  <div className="text-3xl sm:text-4xl font-bold text-blue-600 mb-2">1400+</div>
                   <p className="text-sm sm:text-base text-gray-700 font-medium">Avalúos Realizados</p>
                 </div>
                 <div className="text-center">
-                  <div className="text-3xl sm:text-4xl font-bold text-blue-600 mb-2">500+</div>
+                  <div className="text-3xl sm:text-4xl font-bold text-blue-600 mb-2">1200+</div>
                   <p className="text-sm sm:text-base text-gray-700 font-medium">Clientes Satisfechos</p>
                 </div>
               </div>
@@ -306,6 +306,24 @@ export default function QuienesSomosPage() {
                 icon: CheckCircle,
                 title: "Contador",
                 description: "Gestión contable y financiera",
+                count: "1",
+              },
+              {
+                icon: Users,
+                title: "Peritos",
+                description: "Expertos en dictámenes técnicos y análisis periciales judiciales",
+                count: "3",
+              },
+              {
+                icon: Users,
+                title: "Avaluadores",
+                description: "Profesionales certificados RAA en valuación de inmuebles y activos",
+                count: "3",
+              },
+              {
+                icon: Users,
+                title: "Topografo",
+                description: "Especialista en levantamientos topográficos y georeferenciación",
                 count: "1",
               },
             ].map((member, index) => (

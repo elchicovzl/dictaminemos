@@ -8,9 +8,9 @@ import { Button } from "@/components/ui/button"
 const testimonials = [
   {
     id: 1,
-    name: "María González",
-    position: "Gerente de Proyectos",
-    company: "Constructora Andina",
+    name: "Adriana Hernández",
+    position: "Gerente",
+    company: "Fondo de Empleados Progreso (FONEPRO)",
     content:
       "Dictaminemos nos ha brindado servicios de avalúos excepcionales durante más de 5 años. Su profesionalismo y precisión son incomparables.",
     rating: 5,
@@ -18,9 +18,9 @@ const testimonials = [
   },
   {
     id: 2,
-    name: "Carlos Rodríguez",
-    position: "Director Financiero",
-    company: "Banco Nacional",
+    name: "Dr. Franklin Bedoya",
+    position: "Gerente General",
+    company: "Terraire",
     content:
       "Los dictámenes técnicos de Dictaminemos son siempre detallados y confiables. Han sido fundamentales para nuestras decisiones de inversión.",
     rating: 5,
@@ -28,9 +28,9 @@ const testimonials = [
   },
   {
     id: 3,
-    name: "Ana Martínez",
-    position: "Abogada Especialista",
-    company: "Bufete Jurídico Martínez",
+    name: "Dra. Maritza MArtinez Espinosa",
+    position: "Abogada Especializada",
+    company: "Soluciones Legales Abogados Especializados",
     content:
       "Su experiencia en peritajes judiciales es excepcional. Los informes son claros, precisos y siempre entregados a tiempo.",
     rating: 5,
@@ -38,9 +38,9 @@ const testimonials = [
   },
   {
     id: 4,
-    name: "Roberto Silva",
-    position: "Ingeniero Civil",
-    company: "Desarrollos Urbanos S.A.",
+    name: "Jorge Jaramillo",
+    position: "Constructor Civil",
+    company: "Independiente",
     content:
       "Los levantamientos topográficos con drones han revolucionado nuestros proyectos. Tecnología de punta y resultados impecables.",
     rating: 5,
