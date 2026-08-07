@@ -16,7 +16,7 @@ function WhatsAppLogo({ className = "h-7 w-7" }: { className?: string }) {
 export function WhatsAppChatWidget() {
   const [isOpen, setIsOpen] = useState(false)
   const [message, setMessage] = useState("")
-  const phoneNumber = "573147030835"
+  const phoneNumber = "573103701567"
 
   const predefinedMessages = [
     "Hola, necesito información sobre avalúos",
