@@ -58,7 +58,7 @@ const faqCategories = [
     faqs: [
       {
         question: "¿Cómo puedo solicitar un avalúo con su empresa?",
-        answer: "Puedes hacerlo vía WhatsApp al 314 703 0835, correo a contacto@dictaminemos.com o usando nuestro chat de WhatsApp en la web.",
+        answer: "Puedes hacerlo vía WhatsApp al 310 370 1567, correo a contacto@dictaminemos.com o usando nuestro chat de WhatsApp en la web.",
       },
       {
         question: "¿Realizan visitas físicas al inmueble?",

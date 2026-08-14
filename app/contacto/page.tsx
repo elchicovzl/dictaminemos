@@ -259,7 +259,7 @@ export default function ContactoPage() {
                   </div>
                   <div>
                     <h3 className="font-semibold text-gray-900 mb-1">Teléfono</h3>
-                    <p className="text-gray-600">314 703 0835</p>
+                    <p className="text-gray-600">310 370 1567</p>
                     <p className="text-sm text-gray-500 mt-1">WhatsApp disponible</p>
                   </div>
                 </div>

@@ -142,7 +142,7 @@ export default function RootLayout({
     "url": "https://dictaminemos.com",
     "logo": "https://dictaminemos.com/images/logo.svg",
     "image": "https://dictaminemos.com/images/logo.svg",
-    "telephone": "+573147030835",
+    "telephone": "+573103701567",
     "email": "contacto@dictaminemos.com",
     "address": {
       "@type": "PostalAddress",
